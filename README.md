@@ -27,7 +27,6 @@ cd games/<game-name>
 python <game>.py
 ```
 
-
 ## Credits
 
 See individual `ATTRIBUTION.md` files in each game folder and `CREDITS.md` for the global index.
