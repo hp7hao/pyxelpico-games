@@ -126,17 +126,31 @@ class Game:
             return
         if self.is_game_over and (
             pyxel.btnp(pyxel.GAMEPAD1_BUTTON_B)
+            or pyxel.btnp(pyxel.KEY_Z)
+            or pyxel.btnp(pyxel.KEY_RETURN)
             or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_START)
         ):
             self.reset()
             return
 
-        # Pause: P key or Start button
-        if pyxel.btnp(pyxel.KEY_P) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_START):
+        # Pause/unpause: P key, Enter/Return (mapped from Start), Start button, or A button (when paused)
+        if (
+            pyxel.btnp(pyxel.KEY_P)
+            or pyxel.btnp(pyxel.KEY_RETURN)
+            or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_START)
+        ):
             self.paused = not self.paused
+        elif self.paused and (
+            pyxel.btnp(pyxel.KEY_Z) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_B)
+        ):
+            self.paused = False
 
-        # Music toggle: M key or Select button
-        if pyxel.btnp(pyxel.KEY_M) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_BACK):
+        # Music toggle: M key, TAB key (mapped from Select), or Select button
+        if (
+            pyxel.btnp(pyxel.KEY_M)
+            or pyxel.btnp(pyxel.KEY_TAB)
+            or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_BACK)
+        ):
             if self.music:
                 self.music = False
                 pyxel.stop()
@@ -340,8 +354,9 @@ class Game:
             pyxel.text(sx, 158, "OVER", pyxel.frame_count % 8)
             pyxel.text(sx, 170, "[A]retry", 10)
         elif self.paused:
-            pyxel.text(sx, 150, "[STA]", pyxel.frame_count % 8)
-            pyxel.text(sx, 158, "to play", pyxel.frame_count % 8)
+            pyxel.text(sx, 150, "[A] or", pyxel.frame_count % 8)
+            pyxel.text(sx, 158, "[STA]", pyxel.frame_count % 8)
+            pyxel.text(sx, 166, "to play", pyxel.frame_count % 8)
 
     def mark_grid(self) -> None:
         """Draw grid mark"""

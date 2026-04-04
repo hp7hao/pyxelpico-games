@@ -1,0 +1,77 @@
+[[games]]
+id = "aclm"
+title = "ACLM"
+author = "Jay Kumogata"
+license = "Apache-2.0"
+source_url = "https://github.com/jay-kumogata/RetroGames"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad LEFT/RIGHT steer, A/Start restart"
+has_assets = false
+migration_date = "2026-04-04"
+notes = "Vector game rewritten to native 240x240 with coordinate scaling"
+
+[[games]]
+id = "asteroids"
+title = "Asteroids"
+author = "Jay Kumogata"
+license = "Apache-2.0"
+source_url = "https://github.com/jay-kumogata/RetroGames"
+original_resolution = "320x320"
+scaling_strategy = "native-240"
+controls = "D-pad LEFT/RIGHT rotate, A shoot, Start/A restart"
+has_assets = false
+migration_date = "2026-04-04"
+notes = "Vector game rescaled from 320x320 to native 240x240 (center offset 160->120)"
+
+[[games]]
+id = "bubbles"
+title = "Bubbles"
+author = "helpcomputer"
+license = "MIT"
+source_url = "https://github.com/helpcomputer/bubbles"
+original_resolution = "128x128"
+scaling_strategy = "integer-2x-crop"
+controls = "D-pad move, A jump, B menu/back"
+has_assets = true
+migration_date = "2026-04-04"
+notes = "Integer 2x scale centered and cropped to 240x240 (8px off each edge)"
+
+[[games]]
+id = "frogger"
+title = "Frogger"
+author = "Jay Kumogata"
+license = "Apache-2.0"
+source_url = "https://github.com/jay-kumogata/RetroGames"
+original_resolution = "208x240"
+scaling_strategy = "native-240"
+controls = "D-pad move (8 directions)"
+has_assets = false
+migration_date = "2026-04-04"
+notes = "Grid-based game rewritten to native 240x240"
+
+[[games]]
+id = "kektris"
+title = "Kektris"
+author = "Konstantin Klepikov"
+license = "MIT"
+source_url = "https://github.com/KonstantinKlepikov/kektris"
+original_resolution = "256x256"
+scaling_strategy = "native-240"
+controls = "D-pad move, A rotate left, B rotate right, Start pause, Select music"
+has_assets = true
+migration_date = "2026-04-04"
+notes = "Tetris clone rescaled from 256x256 to native 240x240"
+
+[[games]]
+id = "pinball"
+title = "Pinball"
+author = "Jay Kumogata"
+license = "Apache-2.0"
+source_url = "https://github.com/jay-kumogata/RetroGames"
+original_resolution = "128x128"
+scaling_strategy = "integer-2x-crop"
+controls = "D-pad LEFT/A = left flipper, D-pad RIGHT/B = right flipper, A/Start = restart"
+has_assets = true
+migration_date = "2026-04-04"
+notes = "Integer 2x scale from 128x128, cropped to 240x240"
