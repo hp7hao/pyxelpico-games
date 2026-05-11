@@ -1,4 +1,4 @@
-.PHONY: native native-game web web-game clean-native clean-web clean
+.PHONY: native native-game web web-game carts cart-game clean-native clean-web clean-carts clean
 
 PYXELPICO_DIR ?= ../pyxelpico
 PYTHON ?= $(PYXELPICO_DIR)/.venv/bin/python
@@ -19,10 +19,20 @@ web-game:
 	@test -n "$(GAME)" || { echo "usage: make web-game GAME=<game-id>" >&2; exit 2; }
 	@$(PYTHON) scripts/build_web.py --pyxelpico-dir $(PYXELPICO_DIR) --game $(GAME)
 
+carts:
+	@$(PYTHON) scripts/build_cart_zips.py --pyxelpico-dir $(PYXELPICO_DIR)
+
+cart-game:
+	@test -n "$(GAME)" || { echo "usage: make cart-game GAME=<game-id>" >&2; exit 2; }
+	@$(PYTHON) scripts/build_cart_zips.py --pyxelpico-dir $(PYXELPICO_DIR) --game $(GAME)
+
 clean-web:
 	@rm -rf dist/web
 
 clean-native:
 	@rm -rf dist/native
 
-clean: clean-native clean-web
+clean-carts:
+	@rm -rf dist/carts
+
+clean: clean-native clean-web clean-carts

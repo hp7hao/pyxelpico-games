@@ -29,6 +29,10 @@ on device and from the sibling development path `../pyxelpico-games/games`.
 Use `python3` explicitly if the PyxelPico virtualenv is not available.
 
 ```bash
+# Single-file FCDB cart ZIPs
+make carts
+make cart-game GAME=asteroids
+
 # Native staging for device/image packaging
 make native
 make native-game GAME=asteroids
@@ -42,9 +46,16 @@ make web-game GAME=asteroids
 make clean
 ```
 
-Native output is staged at `dist/native/opt/pyxelpico-games/`. Web output is
-staged at `dist/web/`, with shared PyxelPico WASM runtime files in
-`dist/web/_pyxel/`.
+FCDB cart ZIPs are staged at `dist/carts/pyxelpico/`, with the shared browser
+runtime staged once at `dist/runtimes/pyxelpico/web/`. Native output is staged
+at `dist/native/opt/pyxelpico-games/`. Web output is staged at `dist/web/`, with
+shared PyxelPico WASM runtime files in `dist/web/_pyxel/`.
+
+FCDB treats each PyxelPico game as a single-file cart artifact. The cart file is
+`dist/carts/pyxelpico/<game-id>.zip`; it contains `pyxelpico-cart.json`, a
+`native/` payload, browser-ready `web/index.html`, and `cover.png` when
+available. The cart references the release-level `runtimes/pyxelpico/web/`
+runtime instead of duplicating it per game.
 
 To serve web output locally:
 
@@ -58,6 +69,7 @@ Then open `http://localhost:8000/<game-id>/`.
 
 - Native games run with the PyxelPico engine from `../pyxelpico`, not stock
   upstream Pyxel.
+- FCDB shipping uses one `.zip` cart per game, not loose game directories.
 - Web builds MUST use the local WASM runtime from `../pyxelpico/wasm`; do not
   point generated game pages at the upstream Pyxel CDN.
 - Games target a 240x240 square display and handheld controls: D-pad, A, B,
@@ -94,13 +106,14 @@ or runtime assumptions, update this file and/or `README.md` in the same task.
 For build-system changes, run:
 
 ```bash
-python3 -m py_compile scripts/build_native.py scripts/build_web.py
-make clean && make native PYTHON=python3 && make web PYTHON=python3
+python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py
+make clean && make carts PYTHON=python3 && make native PYTHON=python3 && make web PYTHON=python3
 ```
 
 For single-game changes, run the narrow target first:
 
 ```bash
+make cart-game GAME=<game-id> PYTHON=python3
 make native-game GAME=<game-id> PYTHON=python3
 make web-game GAME=<game-id> PYTHON=python3
 ```

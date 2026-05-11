@@ -29,6 +29,31 @@ python <game>.py
 
 ## Build Targets
 
+### FCDB Cart ZIPs
+
+FCDB treats PyxelPico games as single-file cart artifacts. Build one `.zip`
+cart per game under `dist/carts/pyxelpico/`. The shared browser runtime is
+staged once under `dist/runtimes/pyxelpico/web/`, so FCDB consumers do not need
+to run this build themselves.
+
+```bash
+# Build every FCDB cart ZIP
+make carts
+
+# Build one FCDB cart ZIP
+make cart-game GAME=asteroids
+```
+
+Each cart ZIP contains:
+
+- `pyxelpico-cart.json` — manifest describing the native and web payloads
+- `native/` — launcher-compatible game source/assets for native PyxelPico
+- `web/index.html` — ready-to-serve browser launcher with embedded game payload
+- `cover.png` — cover image when available
+
+The shared runtime directory contains `pyxel.js`, `pyxel.css`, `import_hook.py`,
+the PyxelPico WASM wheel, and runtime images.
+
 ### Native
 
 Native builds stage the files exactly where the PyxelPico launcher expects them
