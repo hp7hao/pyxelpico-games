@@ -1,4 +1,17 @@
 [[games]]
+id = "2048"
+title = "2048"
+author = "straversi"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=153397"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad slide tiles, A/B/Start restart"
+has_assets = true
+migration_date = "2026-05-26"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/179297.p8.png; gameplay-faithful merge rules with simplified visuals and no original audio"
+
+[[games]]
 id = "aclm"
 title = "ACLM"
 author = "Jay Kumogata"
@@ -142,6 +155,19 @@ migration_date = "2026-04-04"
 notes = "Tetris clone rescaled from 256x256 to native 240x240"
 
 [[games]]
+id = "lightwalk"
+title = "LightWalk"
+author = "juliusspeak"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://github.com/juliusspeak/lightwalk"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move cursor, A rotate tile, B/Start restart"
+has_assets = true
+migration_date = "2026-05-26"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/li/lightwalk-0.p8.png; preserves netwalk generation/rotation/power logic with simplified rendering"
+
+[[games]]
 id = "pinball"
 title = "Pinball"
 author = "Jay Kumogata"
@@ -179,3 +205,16 @@ controls = "D-pad move, A/B fire blaster or drop bomb, Start begin"
 has_assets = true
 migration_date = "2026-04-04"
 notes = "Already 240x240 with gamepad support; minimal adaptation needed"
+
+[[games]]
+id = "xmaspong"
+title = "XMAS Pong"
+author = "ReturnOH"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=153606"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad up/down move paddle, A/B/Start begin or rematch"
+has_assets = true
+migration_date = "2026-05-26"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ra/ramgadofu-1.p8.png; gameplay-faithful pong loop with simplified festive visuals and no original audio"
