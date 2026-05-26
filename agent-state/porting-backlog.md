@@ -70,13 +70,14 @@ Policy:
 
 ### 6. Santaban
 
-- Status: todo
+- Status: done
 - Difficulty: medium
 - License: CC BY-NC-SA 4.0 in local FCDB metadata
 - BBS: https://www.lexaloffle.com/bbs/?tid=153450
-- Cart: https://www.lexaloffle.com/bbs/cposts/179484.p8.png
+- Cart: https://www.lexaloffle.com/bbs/cposts/sa/santaban-3.p8.png
 - Why: deterministic Sokoban-like puzzle; good reusable grid engine exercise.
 - Risks: map/level migration effort; NC-SA distribution constraints.
+- 2026-05-26 port note: Confirmed FCDB metadata (`bbs_release.json` id/pid `179484`, tid `153450`, author `skutter-de`, license `CC4-BY-NC-SA`) and BBS slug cart URL (`/bbs/cposts/sa/santaban-3.p8.png`), decoded PXA-compressed cart Lua/map data for API audit, and shipped `games/santaban/santaban.py` + `santaban_data.py`, cover, attribution, `games.toml`, and credits; `make cart-game GAME=santaban PYTHON=python3` passed.
 
 ### 7. Field Jump
 

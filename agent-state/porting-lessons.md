@@ -16,6 +16,16 @@ Template:
 - Backlog changes:
 ```
 
+## santaban — 2026-05-26
+
+- Result: done
+- What translated cleanly: Sokoban core (push-only movement, collision/goal checks, move counter, undo stack, level-complete gating) maps cleanly to a small grid-state engine.
+- What needed shims/manual rewrite: Full manual rewrite in Python; replaced PICO-8 scene/menuitem flow and sprite/map drawing with Pyxel scene states and primitive rendering while preserving 25-level progression.
+- Asset/audio notes: Decoded cart from `https://www.lexaloffle.com/bbs/cposts/sa/santaban-3.p8.png`; extracted level definitions plus map/flag RAM sections into `santaban_data.py`; used cart label-derived cover and simple replacement SFX (no original sprite/audio asset extraction yet).
+- Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/santaban/santaban_data.py games/santaban/santaban.py`; `make cart-game GAME=santaban PYTHON=python3`.
+- Reusable helper opportunities: A shared `sokoban_core` helper (tile/box occupancy, push validation, undo snapshots, win checks) could reduce duplicate logic for future box-pushing/grid puzzle ports.
+- Backlog changes: Marked Santaban done with FCDB + BBS slug cart URL confirmation and noted the working PXA decode path for cart inspection.
+
 ## xmaspong — 2026-05-26
 
 - Result: done

@@ -194,6 +194,19 @@ migration_date = "2026-04-04"
 notes = "Already 240x240 with gamepad support; solo poker card game"
 
 [[games]]
+id = "santaban"
+title = "Santaban"
+author = "skutter-de"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=153450"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move, A/Start confirm and next level, B undo, Select menu"
+has_assets = true
+migration_date = "2026-05-26"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/sa/santaban-3.p8.png; preserves original level layouts/map flags/box starts with simplified visuals and audio"
+
+[[games]]
 id = "stellarblazer"
 title = "StellarBlazer"
 author = "Hiekichi"
