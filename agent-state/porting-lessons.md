@@ -66,3 +66,13 @@ Template:
 - Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/2048/2048.py` and `make cart-game GAME=2048 PYTHON=python3` both passed.
 - Reusable helper opportunities: consider a shared tiny `grid2048` utility if more number-puzzle ports land (line merge + spawn + move checks).
 - Backlog changes: marked 2048 as done and recorded FCDB license/source/cart confirmation + implementation note.
+
+## fieldjump — 2026-05-31
+
+- Result: partial
+- What translated cleanly: High-level BBS premise (Chrome-Dino-like side-scroller with coins/obstacles/levels) maps cleanly to a deterministic Pyxel runner loop with D-pad/A jump, down-duck, coin collection, lives, score, and level-scaled speed.
+- What needed shims/manual rewrite: Full manual rewrite; exact PICO-8 Lua/API audit is blocked because the cart code begins with newer `pxa` compression unsupported by the vendored `picotool` path.
+- Asset/audio notes: Used the downloadable cart label as `cover.png`; no original sprite/audio sections were reused in gameplay, and simple replacement SFX are generated in code.
+- Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/fieldjump/fieldjump.py`; `make cart-game GAME=fieldjump PYTHON=python3`.
+- Reusable helper opportunities: A shared endless-runner helper (spawn pacing, obstacle/coin lane patterns, simple runner collision) could speed up similar one-button platformers such as Floppy Canary once extraction is fixed.
+- Backlog changes: Marked Field Jump partial with confirmed FCDB/BBS license/source/cart metadata and the `pxa` tooling blocker for exact parity.

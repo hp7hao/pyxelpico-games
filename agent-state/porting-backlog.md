@@ -81,13 +81,14 @@ Policy:
 
 ### 7. Field Jump
 
-- Status: todo
+- Status: partial
 - Difficulty: medium-hard
 - License: CC BY-NC-SA 4.0 in local FCDB metadata
 - BBS: https://www.lexaloffle.com/bbs/?tid=154315
 - Cart: https://www.lexaloffle.com/bbs/cposts/fi/fieldjump-0.p8.png
 - Why: side-scroller/platformer after simpler ports are proven.
-- Risks: spawn pacing and collision feel.
+- Risks: spawn pacing and collision feel; exact Lua/API parity blocked until local tooling decodes newer PICO-8 `pxa` compressed code.
+- 2026-05-31 progress note: Confirmed FCDB metadata (`bbs_release.json` id/pid `181917`, tid `154315`, author `fieldjump`, license `CC4-BY-NC-SA`) and BBS cart URL. Downloaded/inspected cart shell: label and data extract, but Lua begins with PICO-8 0.2.7+ `pxa` compression unsupported by vendored `picotool`. Added first playable PyxelPico approximation (`games/fieldjump/fieldjump.py`), cover from cart label, attribution, manifest and credits; `make cart-game GAME=fieldjump PYTHON=python3` passed.
 
 ### 8. Office Hell
 

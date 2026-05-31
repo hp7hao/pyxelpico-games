@@ -90,6 +90,19 @@ migration_date = "2026-04-04"
 notes = "Already 240x240 with gamepad support; minimal adaptation needed"
 
 [[games]]
+id = "fieldjump"
+title = "Field Jump"
+author = "fieldjump"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=154315"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad Up/A jump, D-pad Down duck, A/Start begin or restart"
+has_assets = true
+migration_date = "2026-05-31"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/fi/fieldjump-0.p8.png; first playable side-scroller approximation because local tooling cannot yet decode newer PICO-8 pxa-compressed Lua"
+
+[[games]]
 id = "flatbird"
 title = "FlatBird"
 author = "Hiekichi"
