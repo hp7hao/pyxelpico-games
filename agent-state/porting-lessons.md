@@ -76,3 +76,15 @@ Template:
 - Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/fieldjump/fieldjump.py`; `make cart-game GAME=fieldjump PYTHON=python3`.
 - Reusable helper opportunities: A shared endless-runner helper (spawn pacing, obstacle/coin lane patterns, simple runner collision) could speed up similar one-button platformers such as Floppy Canary once extraction is fixed.
 - Backlog changes: Marked Field Jump partial with confirmed FCDB/BBS license/source/cart metadata and the `pxa` tooling blocker for exact parity.
+
+
+## officehell — 2026-06-02
+
+- Result: partial
+- What translated cleanly: The documented control premise (choose left/right once, then time jumps while Jimbo auto-runs) maps cleanly to a small deterministic platformer state machine with level fixtures.
+- What needed shims/manual rewrite: Full manual rewrite; exact PICO-8 Lua/API audit remains blocked because the cart code begins with newer `pxa` compression unsupported by the vendored `picotool` path.
+- Asset/audio notes: Used the downloadable cart label as `cover.png`; map/gfx/sfx/music byte regions extract, but gameplay uses procedural office art and replacement SFX until Lua/assets can be decoded more completely.
+- Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/officehell/officehell.py`; `make cart-game GAME=officehell PYTHON=python3`.
+- Reusable helper opportunities: The one-way auto-runner platformer loop (preselect direction, coyote jump, fixture levels, hazard/exit checks) could help future Rat-on-the-Run-style puzzle-platformers.
+- Backlog changes: Marked Office Hell partial with confirmed FCDB/BBS license/source/cart metadata and the `pxa` tooling blocker for exact parity.
+

@@ -181,6 +181,19 @@ migration_date = "2026-05-26"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/li/lightwalk-0.p8.png; preserves netwalk generation/rotation/power logic with simplified rendering"
 
 [[games]]
+id = "officehell"
+title = "Office Hell"
+author = "OlieB123"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=154283"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad left/right choose direction, A/Up jump, A/Start begin or retry"
+has_assets = true
+migration_date = "2026-06-02"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/of/office_hell_1_0-0.p8.png; first playable one-button puzzle-platformer adaptation because local tooling cannot yet decode newer PICO-8 pxa-compressed Lua"
+
+[[games]]
 id = "pinball"
 title = "Pinball"
 author = "Jay Kumogata"

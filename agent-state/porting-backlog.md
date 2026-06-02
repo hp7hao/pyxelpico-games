@@ -92,13 +92,15 @@ Policy:
 
 ### 8. Office Hell
 
-- Status: todo
+- Status: partial
 - Difficulty: hard
 - License: CC BY-NC-SA 4.0 in local FCDB metadata
 - BBS: https://www.lexaloffle.com/bbs/?tid=154283
 - Cart: https://www.lexaloffle.com/bbs/cposts/of/office_hell_1_0-0.p8.png
 - Why: puzzle-platformer candidate once platformer helpers exist.
 - Risks: higher polish cost.
+
+- 2026-06-02 progress note: Confirmed FCDB metadata (`bbs_release.json` id/pid `181808`, tid `154283`, author `OlieB123`, license `CC4-BY-NC-SA`) and BBS cart URL. Downloaded/inspected cart shell: map/gfx/sfx/music bytes extract, BBS text confirms one-button direction+jump puzzle-platformer premise, but Lua begins with newer PICO-8 `pxa` compression unsupported by vendored `picotool`. Added first playable PyxelPico adaptation (`games/officehell/officehell.py`), cover from cart label, attribution, manifest and credits; `make cart-game GAME=officehell PYTHON=python3` passed.
 
 ### 9. PICO-BALL
 
