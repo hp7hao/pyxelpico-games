@@ -207,6 +207,19 @@ migration_date = "2026-04-04"
 notes = "Integer 2x scale from 128x128, cropped to 240x240"
 
 [[games]]
+id = "picoball"
+title = "PICO-BALL"
+author = "Munchkin"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=150620"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move Jelpi, A/Up jump, A/Start serve or rematch"
+has_assets = true
+migration_date = "2026-06-03"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/pico_ball-5.p8.png; first playable solo/wallball adaptation because local tooling cannot yet decode newer PICO-8 pxa-compressed Lua"
+
+[[games]]
 id = "poker"
 title = "Poker"
 author = "Hiekichi"

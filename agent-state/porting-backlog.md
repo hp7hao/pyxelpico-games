@@ -104,13 +104,14 @@ Policy:
 
 ### 9. PICO-BALL
 
-- Status: todo
+- Status: partial
 - Difficulty: hard
 - License: CC BY-NC-SA 4.0 in local FCDB metadata
 - BBS: https://www.lexaloffle.com/bbs/?tid=150620
-- Cart: https://www.lexaloffle.com/bbs/cposts/171244.p8.png
+- Cart: https://www.lexaloffle.com/bbs/cposts/pi/pico_ball-5.p8.png
 - Why: physics/sports challenge after easier ports.
-- Risks: physics and AI feel; higher asset/audio complexity.
+- Risks: physics and AI feel; higher asset/audio complexity; original has multiplayer/campaign/powerups beyond a first handheld solo pass.
+- 2026-06-03 progress note: Confirmed FCDB metadata (`bbs_release.json` id/pid `171244`, tid `150620`, author `Munchkin`, license `CC4-BY-NC-SA`) and corrected the live BBS cart URL from the thread (`/bbs/cposts/pi/pico_ball-5.p8.png`; the older numeric URL 404s). Downloaded/inspected cart shell: RAM/header extract shows newer PICO-8 `pxa` compressed Lua unsupported by vendored `picotool`; BBS text confirms tennis/volleyball/squash/wallball premise, two-bounce scoring rule, solo/together modes, and arrow/Z/X/controller controls. Added first playable PyxelPico solo/wallball adaptation (`games/picoball/picoball.py`), cover from cart label, attribution, manifest and credits; `make cart-game GAME=picoball PYTHON=python3` passed.
 
 ### 10. Pico Valley
 

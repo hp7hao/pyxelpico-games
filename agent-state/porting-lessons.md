@@ -88,3 +88,13 @@ Template:
 - Reusable helper opportunities: The one-way auto-runner platformer loop (preselect direction, coyote jump, fixture levels, hazard/exit checks) could help future Rat-on-the-Run-style puzzle-platformers.
 - Backlog changes: Marked Office Hell partial with confirmed FCDB/BBS license/source/cart metadata and the `pxa` tooling blocker for exact parity.
 
+
+## picoball — 2026-06-03
+
+- Result: partial
+- What translated cleanly: The published core rule — tennis/volleyball/squash/wallball with a point awarded after two bounces on one side — maps cleanly to a small Pyxel physics loop with a court divider, bounce counters, rally tracking, and handheld solo controls.
+- What needed shims/manual rewrite: Full manual rewrite; exact PICO-8 Lua/API audit remains blocked because the live cart uses newer `pxa` compression unsupported by vendored `picotool`. Multiplayer, campaign opponents, hats, settings, and powerups are intentionally out of scope for this first solo/wallball pass.
+- Asset/audio notes: Corrected the cart URL to the live BBS slug path (`https://www.lexaloffle.com/bbs/cposts/pi/pico_ball-5.p8.png`); used the downloadable cart label as `cover.png`; gameplay art and SFX are procedural replacements.
+- Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/picoball/picoball.py`; `make cart-game GAME=picoball PYTHON=python3`.
+- Reusable helper opportunities: A shared tiny sports-physics helper (body integration, ball/capsule collision, side/bounce scoring, simple CPU pursuit) could help future Pong/tennis/volleyball-style ports.
+- Backlog changes: Marked PICO-BALL partial with confirmed FCDB/BBS metadata, corrected cart URL, BBS premise/control audit, and the `pxa` tooling blocker for exact parity.
