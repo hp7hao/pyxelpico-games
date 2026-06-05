@@ -89,6 +89,7 @@ Policy:
 - Why: side-scroller/platformer after simpler ports are proven.
 - Risks: spawn pacing and collision feel; exact Lua/API parity blocked until local tooling decodes newer PICO-8 `pxa` compressed code.
 - 2026-05-31 progress note: Confirmed FCDB metadata (`bbs_release.json` id/pid `181917`, tid `154315`, author `fieldjump`, license `CC4-BY-NC-SA`) and BBS cart URL. Downloaded/inspected cart shell: label and data extract, but Lua begins with PICO-8 0.2.7+ `pxa` compression unsupported by vendored `picotool`. Added first playable PyxelPico approximation (`games/fieldjump/fieldjump.py`), cover from cart label, attribution, manifest and credits; `make cart-game GAME=fieldjump PYTHON=python3` passed.
+- 2026-06-05 progress note: Reconfirmed FCDB/BBS metadata and cart shell (`version 43`, code region starts `00 70 78 61`, so vendored `picotool` still treats it as empty Lua). Improved the partial port with explicit multi-level progression, level-clear/win states, a progress meter, bonus scoring, and a higher-level flying obstacle; `make cart-game GAME=fieldjump PYTHON=python3` passed.
 
 ### 8. Office Hell
 

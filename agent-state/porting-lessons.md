@@ -98,3 +98,13 @@ Template:
 - Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/picoball/picoball.py`; `make cart-game GAME=picoball PYTHON=python3`.
 - Reusable helper opportunities: A shared tiny sports-physics helper (body integration, ball/capsule collision, side/bounce scoring, simple CPU pursuit) could help future Pong/tennis/volleyball-style ports.
 - Backlog changes: Marked PICO-BALL partial with confirmed FCDB/BBS metadata, corrected cart URL, BBS premise/control audit, and the `pxa` tooling blocker for exact parity.
+
+## fieldjump — 2026-06-05
+
+- Result: partial
+- What translated cleanly: The BBS-confirmed levels premise maps to explicit stage goals, level-clear transitions, bonus scoring, a final win state, and a small HUD progress meter without changing the core runner loop.
+- What needed shims/manual rewrite: Exact API/Lua parity is still blocked; cart version 43 has code bytes starting `00 70 78 61` (`pxa`), which vendored `picotool` still parses as empty Lua.
+- Asset/audio notes: Reused existing cart-label cover; gameplay art/audio remain procedural replacements. Added a flying obstacle for later levels rather than extracted sprite data.
+- Verification: `python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/fieldjump/fieldjump.py`; `make cart-game GAME=fieldjump PYTHON=python3`.
+- Reusable helper opportunities: Level-gated endless-runner helpers should include stage-distance goals, clear overlays, score bonuses, and obstacle tables keyed by level.
+- Backlog changes: Kept Field Jump as partial; documented the measurable fidelity improvement and reconfirmed the `pxa` tooling blocker.

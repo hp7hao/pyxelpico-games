@@ -10,11 +10,11 @@
 
 This PyxelPico version is a Python/Pyxel port for the 240x240 Pico8Go target.
 It preserves the published high-level premise — side-scrolling platformer,
-collect coins, avoid obstacles — with handheld controls:
+collect coins, avoid obstacles, with level progression — with handheld controls:
 
 - D-pad Up or A: jump
 - D-pad Down: duck
-- Start/A: start or restart
+- Start/A: start, advance clear screens, or restart
 
 ## Notes
 
@@ -26,3 +26,7 @@ collect coins, avoid obstacles — with handheld controls:
 - `cover.png` is derived from the original downloadable cart label.
 - No original audio data was reused; simple replacement Pyxel SFX are generated
   in code.
+- 2026-06-05 follow-up: added explicit stage goals, level-clear transitions,
+  a final win state, progress meter, and a higher-level flying obstacle to more
+  closely match the BBS-described "levels and many more features" premise while
+  exact Lua parity remains blocked by `pxa` decoding.

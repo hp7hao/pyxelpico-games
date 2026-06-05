@@ -31,6 +31,7 @@ PLAYER_X = 54
 GRAVITY = 0.55
 JUMP_V = -9.2
 RUN_SPEED = 2.6
+MAX_LEVEL = 5
 
 COLORS = {
     "sky": 12,
@@ -54,6 +55,7 @@ class Obstacle:
     w: int
     h: int
     kind: str = "crate"
+    y: int = GROUND_Y
 
 
 @dataclass
@@ -85,9 +87,12 @@ class FieldJump:
         self.ducking = False
         self.scroll = 0.0
         self.score = 0
+        self.bonus_score = 0
         self.coins = 0
         self.level = 1
         self.distance = 0
+        self.stage_distance = 0.0
+        self.clear_timer = 0
         self.lives = 3
         self.invuln = 0
         self.spawn_timer = 32
@@ -103,20 +108,54 @@ class FieldJump:
             if ih.btnp_a() or ih.btnp_start():
                 self.reset(attract=False)
             return
-        if self.mode == "gameover":
+        if self.mode == "levelclear":
+            self.clear_timer -= 1
+            if self.clear_timer <= 0 or ih.btnp_a() or ih.btnp_start():
+                self._advance_level()
+            return
+        if self.mode in ("gameover", "win"):
             if ih.btnp_a() or ih.btnp_start():
                 self.reset(attract=False)
             return
 
         self._update_play()
 
+    def _stage_goal(self) -> int:
+        return 720 + (self.level - 1) * 180
+
+    def _advance_level(self) -> None:
+        if self.level >= MAX_LEVEL:
+            self.best_score = max(self.best_score, self.score)
+            self.mode = "win"
+            return
+        self.level += 1
+        self.stage_distance = 0.0
+        self.player_y = GROUND_Y - 18
+        self.player_vy = 0.0
+        self.on_ground = True
+        self.ducking = False
+        self.invuln = 30
+        self.spawn_timer = 34
+        self.coin_timer = 22
+        self.mode = "play"
+
     def _update_play(self) -> None:
-        speed = RUN_SPEED + min(2.3, self.level * 0.22 + self.distance / 3600)
+        speed = RUN_SPEED + min(2.5, (self.level - 1) * 0.34 + self.stage_distance / 1700)
         self.scroll += speed
         self.distance += int(speed)
-        self.score = self.distance // 8 + self.coins * 25
-        self.level = 1 + self.score // 450
+        self.stage_distance += speed
+        self.score = self.distance // 8 + self.coins * 25 + self.bonus_score
         self.invuln = max(0, self.invuln - 1)
+
+        if self.stage_distance >= self._stage_goal():
+            self.bonus_score += self.level * 100
+            self.score = self.distance // 8 + self.coins * 25 + self.bonus_score
+            self.clear_timer = 90
+            self.mode = "levelclear"
+            self.obstacles.clear()
+            self.coin_items.clear()
+            pyxel.play(3, 3)
+            return
 
         self.ducking = ih.btn_down() and self.on_ground
         if (ih.btnp_a() or ih.btnp_up()) and self.on_ground:
@@ -152,13 +191,18 @@ class FieldJump:
         self._check_collisions()
 
     def _spawn_obstacle(self) -> None:
-        kind = self.rng.choice(["stump", "rock", "crate", "hay"])
+        kinds = ["stump", "rock", "crate", "hay"]
+        if self.level >= 2:
+            kinds.append("bird")
+        kind = self.rng.choice(kinds)
         if kind == "stump":
             self.obstacles.append(Obstacle(SCREEN_W + 6, 10, 18, kind))
         elif kind == "rock":
             self.obstacles.append(Obstacle(SCREEN_W + 6, 15, 11, kind))
         elif kind == "hay":
             self.obstacles.append(Obstacle(SCREEN_W + 6, 18, 14, kind))
+        elif kind == "bird":
+            self.obstacles.append(Obstacle(SCREEN_W + 6, 18, 10, kind, GROUND_Y - 34))
         else:
             self.obstacles.append(Obstacle(SCREEN_W + 6, 14, 14, kind))
 
@@ -185,7 +229,7 @@ class FieldJump:
         if self.invuln:
             return
         for obstacle in self.obstacles:
-            ox, oy, ow, oh = obstacle.x, GROUND_Y - obstacle.h, obstacle.w, obstacle.h
+            ox, oy, ow, oh = obstacle.x, obstacle.y - obstacle.h, obstacle.w, obstacle.h
             if px < ox + ow and px + pw > ox and py < oy + oh and py + ph > oy:
                 self.lives -= 1
                 self.invuln = 50
@@ -206,8 +250,12 @@ class FieldJump:
         self._draw_hud()
         if self.mode == "title":
             self._draw_title()
+        elif self.mode == "levelclear":
+            self._draw_levelclear()
         elif self.mode == "gameover":
             self._draw_gameover()
+        elif self.mode == "win":
+            self._draw_win()
 
     def _draw_field(self) -> None:
         pyxel.rect(0, 154, SCREEN_W, 34, COLORS["field"])
@@ -246,7 +294,7 @@ class FieldJump:
 
     def _draw_obstacle(self, obstacle: Obstacle) -> None:
         x = int(obstacle.x)
-        y = GROUND_Y - obstacle.h
+        y = obstacle.y - obstacle.h
         if obstacle.kind == "rock":
             pyxel.circ(x + obstacle.w // 2, y + obstacle.h // 2, obstacle.w // 2, 5)
             pyxel.circ(x + obstacle.w // 2, y + obstacle.h // 2 - 2, obstacle.w // 2 - 3, 13)
@@ -258,6 +306,12 @@ class FieldJump:
             pyxel.rect(x, y + 2, obstacle.w, obstacle.h - 2, 9)
             pyxel.line(x, y + 5, x + obstacle.w, y + 3, 10)
             pyxel.line(x + 2, y + obstacle.h - 4, x + obstacle.w - 2, y + 6, 10)
+        elif obstacle.kind == "bird":
+            wing = 2 if pyxel.frame_count % 14 < 7 else -2
+            pyxel.rect(x + 5, y + 3, 8, 5, 8)
+            pyxel.pset(x + 12, y + 4, 0)
+            pyxel.line(x + 5, y + 5, x, y + 5 + wing, 8)
+            pyxel.line(x + 12, y + 5, x + 17, y + 5 + wing, 8)
         else:
             pyxel.rect(x, y, obstacle.w, obstacle.h, COLORS["obstacle"])
             pyxel.rectb(x, y, obstacle.w, obstacle.h, 4)
@@ -274,8 +328,12 @@ class FieldJump:
         pyxel.rect(0, 0, SCREEN_W, 18, 0)
         pyxel.text(5, 5, f"score {self.score:05d}", COLORS["text"])
         pyxel.text(88, 5, f"coins {self.coins}", COLORS["coin"])
-        pyxel.text(150, 5, f"lv {self.level}", COLORS["flag"])
+        pyxel.text(150, 5, f"lv {self.level}/{MAX_LEVEL}", COLORS["flag"])
         pyxel.text(196, 5, "*" * self.lives, 8)
+        if self.mode == "play":
+            progress = min(1.0, self.stage_distance / self._stage_goal())
+            pyxel.rect(4, 18, 60, 3, 5)
+            pyxel.rect(4, 18, int(60 * progress), 3, 11)
 
     def _draw_title(self) -> None:
         pyxel.rect(24, 58, 192, 92, 0)
@@ -285,6 +343,14 @@ class FieldJump:
         pyxel.text(55, 112, "A/UP jump  DOWN duck", 6)
         pyxel.text(58, 130, "press A or START", 11)
 
+    def _draw_levelclear(self) -> None:
+        pyxel.rect(34, 66, 172, 82, 0)
+        pyxel.rectb(34, 66, 172, 82, 11)
+        pyxel.text(83, 80, f"LEVEL {self.level} CLEAR", 11)
+        pyxel.text(71, 101, f"bonus {self.level * 100}", 10)
+        next_text = "next field ahead" if self.level < MAX_LEVEL else "final sprint complete"
+        pyxel.text(70, 119, next_text, 7)
+
     def _draw_gameover(self) -> None:
         pyxel.rect(32, 64, 176, 86, 0)
         pyxel.rectb(32, 64, 176, 86, 8)
@@ -292,6 +358,14 @@ class FieldJump:
         pyxel.text(73, 98, f"score {self.score}", 7)
         pyxel.text(73, 110, f"best  {self.best_score}", 10)
         pyxel.text(58, 132, "press A or START", 11)
+
+    def _draw_win(self) -> None:
+        pyxel.rect(30, 58, 180, 98, 0)
+        pyxel.rectb(30, 58, 180, 98, 11)
+        pyxel.text(83, 74, "FIELDS CLEARED!", 11)
+        pyxel.text(70, 96, f"score {self.score}", 7)
+        pyxel.text(70, 108, f"best  {self.best_score}", 10)
+        pyxel.text(58, 134, "press A or START", 11)
 
 
 if __name__ == "__main__":
