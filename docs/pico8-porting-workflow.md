@@ -24,7 +24,7 @@ Out of scope by default:
 
 Read these before porting:
 
-- `projects/pyxelpico-games/CLAUDE.md`
+- `projects/pyxelpico-games/AGENTS.md`
 - `projects/pyxelpico-games/games.toml`
 - `projects/pyxelpico/pyxelpico/spec/game_migration_guide_spec.md`
 - `projects/pyxelpico/pyxelpico/spec/game_manifest_spec.md`
@@ -109,7 +109,7 @@ Create:
 - `games/<game-id>/cover.png`
 - asset files only if needed and license-compatible.
 
-Follow `projects/pyxelpico-games/CLAUDE.md`:
+Follow `projects/pyxelpico-games/AGENTS.md`:
 
 - one game per directory,
 - main script name matches game id,
