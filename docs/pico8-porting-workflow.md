@@ -26,10 +26,10 @@ Read these before porting:
 
 - `projects/pyxelpico-games/AGENTS.md`
 - `projects/pyxelpico-games/games.toml`
-- `projects/pyxelpico/pyxelpico/spec/game_migration_guide_spec.md`
-- `projects/pyxelpico/pyxelpico/spec/game_manifest_spec.md`
-- `projects/pyxelpico/pyxelpico/spec/pyxel_game_execution_spec.md`
-- `projects/pyxelpico/pyxelpico/spec/pico8_sound_engine_spec.md`
+- `projects/pyxelpico/docs/specs/game_migration_guide_spec.md`
+- `projects/pyxelpico/docs/specs/game_manifest_spec.md`
+- `projects/pyxelpico/docs/specs/pyxel_game_execution_spec.md`
+- `projects/pyxelpico/docs/specs/pico8_sound_engine_spec.md`
 - `projects/fcdb/sources/pico8/bbs_release.json`
 
 Useful local tools/libraries:

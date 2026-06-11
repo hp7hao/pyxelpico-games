@@ -79,7 +79,7 @@ Then open `http://localhost:8000/<game-id>/`.
 ## Relevant Specs
 
 This repository does not currently have its own `docs/specs/` directory. Before
-changing behavior, read the owning specs in `../pyxelpico/pyxelpico/spec/`:
+changing behavior, read the owning specs in `../pyxelpico/docs/specs/`:
 
 - `game_manifest_spec.md` for `games.toml` schema and maintenance rules.
 - `game_migration_guide_spec.md` for game adaptation expectations.
