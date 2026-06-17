@@ -2,10 +2,10 @@
 
 **PyxelPico port**: `games/officehell/officehell.py`
 
-**Original title**: Office Hell  
-**Original author**: OlieB123  
-**Original source**: https://www.lexaloffle.com/bbs/?tid=154283  
-**Original cart**: https://www.lexaloffle.com/bbs/cposts/of/office_hell_1_0-0.p8.png  
+**Original title**: Office Hell
+**Original author**: OlieB123
+**Original source**: https://www.lexaloffle.com/bbs/?tid=154283
+**Original cart**: https://www.lexaloffle.com/bbs/cposts/of/office_hell_1_0-0.p8.png
 **License**: CC BY-NC-SA 4.0, as reported by the Lexaloffle BBS / local FCDB metadata.
 
 ## Port notes

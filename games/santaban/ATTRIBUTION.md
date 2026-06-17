@@ -1,8 +1,8 @@
 # Santaban
 
-**Original author**: skutter-de  
-**License**: CC BY-NC-SA 4.0 (from PICO-8 BBS / FCDB metadata)  
-**Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=153450  
+**Original author**: skutter-de
+**License**: CC BY-NC-SA 4.0 (from PICO-8 BBS / FCDB metadata)
+**Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=153450
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/sa/santaban-3.p8.png
 
 PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json` (id/pid `179484`, tid `153450`).

@@ -1,9 +1,9 @@
 # LightWalk
 
-**Original author**: juliusspeak  
-**License**: CC BY-NC-SA 4.0 (from PICO-8 BBS / FCDB metadata)  
-**Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=154308  
-**Original cart**: https://www.lexaloffle.com/bbs/cposts/li/lightwalk-0.p8.png  
+**Original author**: juliusspeak
+**License**: CC BY-NC-SA 4.0 (from PICO-8 BBS / FCDB metadata)
+**Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=154308
+**Original cart**: https://www.lexaloffle.com/bbs/cposts/li/lightwalk-0.p8.png
 **Upstream source**: https://github.com/juliusspeak/lightwalk
 
 PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json` (id `181886`, tid `154308`).

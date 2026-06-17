@@ -2,10 +2,10 @@
 
 **PyxelPico port**: `games/picoball/picoball.py`
 
-**Original title**: PICO-BALL: a Sports Game Starring Jelpi  
-**Original author**: Munchkin  
-**Original source**: https://www.lexaloffle.com/bbs/?tid=150620  
-**Original cart**: https://www.lexaloffle.com/bbs/cposts/pi/pico_ball-5.p8.png  
+**Original title**: PICO-BALL: a Sports Game Starring Jelpi
+**Original author**: Munchkin
+**Original source**: https://www.lexaloffle.com/bbs/?tid=150620
+**Original cart**: https://www.lexaloffle.com/bbs/cposts/pi/pico_ball-5.p8.png
 **License**: CC BY-NC-SA 4.0, as reported by the Lexaloffle BBS / local FCDB metadata (`CC4-BY-NC-SA`).
 
 ## Port notes

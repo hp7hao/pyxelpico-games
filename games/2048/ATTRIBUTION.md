@@ -1,8 +1,8 @@
 # 2048
 
-**Original author**: straversi  
-**License**: CC BY-NC-SA 4.0  
-**Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=153397  
+**Original author**: straversi
+**License**: CC BY-NC-SA 4.0
+**Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=153397
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/179297.p8.png
 
 PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json` (id/pid `179297`, tid `153397`).

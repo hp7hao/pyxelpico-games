@@ -1,9 +1,9 @@
 # Field Jump Attribution
 
-**Original title**: Field Jump - Collect coins, avoid obstacles  
-**Original author**: fieldjump  
-**Original source**: https://www.lexaloffle.com/bbs/?tid=154315  
-**Original cart**: https://www.lexaloffle.com/bbs/cposts/fi/fieldjump-0.p8.png  
+**Original title**: Field Jump - Collect coins, avoid obstacles
+**Original author**: fieldjump
+**Original source**: https://www.lexaloffle.com/bbs/?tid=154315
+**Original cart**: https://www.lexaloffle.com/bbs/cposts/fi/fieldjump-0.p8.png
 **License**: CC BY-NC-SA 4.0, per local FCDB/BBS metadata (`CC4-BY-NC-SA`)
 
 ## Adaptation
