@@ -12,17 +12,17 @@ migration_date = "2026-05-26"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/179297.p8.png; gameplay-faithful merge rules with simplified visuals and no original audio"
 
 [[games]]
-id = "airdelivery"
-title = "Air Delivery"
-author = "pianoman373"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=52598"
+id = "aclm"
+title = "ACLM"
+author = "Jay Kumogata"
+license = "Apache-2.0"
+source_url = "https://github.com/jay-kumogata/RetroGames"
 original_resolution = "128x128"
 scaling_strategy = "native-240"
-controls = "D-pad move/climb, A jump, B interact/glide/drill, A/Start begin or retry"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ai/air_delivery_1-3.p8.png; first playable sky-island delivery platformer adaptation with simplified procedural art/audio and host-tested movement/climb/jump/glide/delivery/drill/airship rules"
+controls = "D-pad LEFT/RIGHT steer, A/Start restart"
+has_assets = false
+migration_date = "2026-04-04"
+notes = "Vector game rewritten to native 240x240 with coordinate scaling"
 
 [[games]]
 id = "advancedmicroplatformer"
@@ -38,17 +38,17 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/3/37402.p8.png; first playable starter-kit demo adaptation with simplified procedural art/audio and host-tested coyote jump, buffered jump, variable jump height, friction, one-way platform, camera threshold, and goal rules; excludes the separate Super Mario cart in the same BBS thread"
 
 [[games]]
-id = "aclm"
-title = "ACLM"
-author = "Jay Kumogata"
-license = "Apache-2.0"
-source_url = "https://github.com/jay-kumogata/RetroGames"
+id = "airdelivery"
+title = "Air Delivery"
+author = "pianoman373"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=52598"
 original_resolution = "128x128"
 scaling_strategy = "native-240"
-controls = "D-pad LEFT/RIGHT steer, A/Start restart"
-has_assets = false
-migration_date = "2026-04-04"
-notes = "Vector game rewritten to native 240x240 with coordinate scaling"
+controls = "D-pad move/climb, A jump, B interact/glide/drill, A/Start begin or retry"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ai/air_delivery_1-3.p8.png; first playable sky-island delivery platformer adaptation with simplified procedural art/audio and host-tested movement/climb/jump/glide/delivery/drill/airship rules"
 
 [[games]]
 id = "asteroids"
@@ -77,6 +77,19 @@ migration_date = "2026-04-04"
 notes = "Already 240x240 with gamepad support; Bomberman clone with 6 stages"
 
 [[games]]
+id = "bas"
+title = "BAS"
+author = "yokozuna / yokoboko"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=54986"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "Left/A jump left, Right/B jump right, A/B/Start retry, Select title"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ba/bas-9.p8.png; first playable endless wall-jump highscore adaptation with simplified procedural art/audio and host-tested jump/saw/trap/score/highscore rules"
+
+[[games]]
 id = "birdswithguns"
 title = "Birds With Guns"
 author = "Yolwoocle and Gouspourd"
@@ -101,6 +114,19 @@ controls = "D-pad steer, A/Down accelerate, B/Up brake, Select boost, Left/Right
 has_assets = true
 migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/br/brutalpicorace_104-0.p8.png; first playable futuristic racing adaptation with simplified procedural art/audio and host-tested ship classes, acceleration, brake, boost, wall damage, drafting, AI progress, laps, finish, and ranking rules"
+
+[[games]]
+id = "bubbles"
+title = "Bubbles"
+author = "helpcomputer"
+license = "MIT"
+source_url = "https://github.com/helpcomputer/bubbles"
+original_resolution = "128x128"
+scaling_strategy = "integer-2x-crop"
+controls = "D-pad move, A jump, B menu/back"
+has_assets = true
+migration_date = "2026-04-04"
+notes = "Integer 2x scale centered and cropped to 240x240 (8px off each edge)"
 
 [[games]]
 id = "buns"
@@ -129,30 +155,17 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ca/cab_ride-7.p8.png; first playable relaxed train-sim adaptation with simplified procedural art/audio and host-tested throttle/brake, doors, passenger, station rating, express, and last-station rules"
 
 [[games]]
-id = "bas"
-title = "BAS"
-author = "yokozuna / yokoboko"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=54986"
-original_resolution = "128x128"
+id = "cheaperdepth"
+title = "CheaperDepth"
+author = "Hiekichi"
+license = "Unlicensed"
+source_url = "https://github.com/Hiekichi/CheeperDepth"
+original_resolution = "240x240"
 scaling_strategy = "native-240"
-controls = "Left/A jump left, Right/B jump right, A/B/Start retry, Select title"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ba/bas-9.p8.png; first playable endless wall-jump highscore adaptation with simplified procedural art/audio and host-tested jump/saw/trap/score/highscore rules"
-
-[[games]]
-id = "bubbles"
-title = "Bubbles"
-author = "helpcomputer"
-license = "MIT"
-source_url = "https://github.com/helpcomputer/bubbles"
-original_resolution = "128x128"
-scaling_strategy = "integer-2x-crop"
-controls = "D-pad move, A jump, B menu/back"
+controls = "D-pad LEFT/RIGHT move, Z/B drop left charge, X/A drop right charge, Start begin"
 has_assets = true
 migration_date = "2026-04-04"
-notes = "Integer 2x scale centered and cropped to 240x240 (8px off each edge)"
+notes = "Already 240x240 with gamepad support; minimal adaptation needed"
 
 [[games]]
 id = "cherrybomb"
@@ -194,32 +207,6 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/co/combopool-0.p8.png; first playable marble-merge pool adaptation with simplified procedural art/audio and host-tested aim/shot/rebound/merge/life rules"
 
 [[games]]
-id = "eightlegslove"
-title = "8 Legs to Love"
-author = "bridgs"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=29451"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad move, hold A spin web, release A place strand, B anchor strand, Start restart"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/4/41422.p8.png; first playable spider web-building arcade adaptation with simplified procedural art/audio and host-tested movement/web placement/bug catch/beetle damage/butterfly/level-clear rules"
-
-[[games]]
-id = "cheaperdepth"
-title = "CheaperDepth"
-author = "Hiekichi"
-license = "Unlicensed"
-source_url = "https://github.com/Hiekichi/CheeperDepth"
-original_resolution = "240x240"
-scaling_strategy = "native-240"
-controls = "D-pad LEFT/RIGHT move, Z/B drop left charge, X/A drop right charge, Start begin"
-has_assets = true
-migration_date = "2026-04-04"
-notes = "Already 240x240 with gamepad support; minimal adaptation needed"
-
-[[games]]
 id = "driftmania"
 title = "Driftmania"
 author = "Max Bize; music by Vav; cars based on art by PixelArtM; cover art by TerracotaScarf"
@@ -246,6 +233,19 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/du/dungeon-0.p8.png; first playable roguelite platform-dungeon adaptation with simplified procedural art/audio and host-tested wall jumping, enemies, coins, shop powerups, weapons, depth zones, portals, and final rescue rules"
 
 [[games]]
+id = "eightlegslove"
+title = "8 Legs to Love"
+author = "bridgs"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=29451"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move, hold A spin web, release A place strand, B anchor strand, Start restart"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/4/41422.p8.png; first playable spider web-building arcade adaptation with simplified procedural art/audio and host-tested movement/web placement/bug catch/beetle damage/butterfly/level-clear rules"
+
+[[games]]
 id = "fieldjump"
 title = "Field Jump"
 author = "fieldjump"
@@ -259,45 +259,6 @@ migration_date = "2026-05-31"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/fi/fieldjump-0.p8.png; playable side-scroller with staged level-clear progression; exact parity remains blocked because local tooling cannot yet decode newer PICO-8 pxa-compressed Lua"
 
 [[games]]
-id = "freezingknights"
-title = "Freezing Knights"
-author = "tinyevilwizard"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=50683"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad choose path/target/knight, A travel or strike, B potion, Select defend, Start begin or retry"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/fr/freezing_knights-9.p8.png and source https://github.com/tinyevilwizard/FreezingKnights; first playable two-knight snowy RPG adaptation with simplified procedural art/audio and host-tested path/battle/timed-defense/rest/upgrade/wipe rules"
-
-[[games]]
-id = "guncho"
-title = "Guncho"
-author = "spoike; original 7DRL by Arnold Rauers and Terri Vellman"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=48452"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "Left/Right aim, Up/Down action, A use, B next action, Start restart"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/gu/guncho-3.p8.png; first playable turn-based western tactics adaptation with simplified procedural art/audio and host-tested hex movement, revolver shoot/reload, punch/stun, dynamite, enemy turns, camp clear, and boss-victory rules; avoids later commercial release assets"
-
-[[games]]
-id = "haroldsbad"
-title = "Harold's Bad Day"
-author = "biovoid; inspiration and additional graphics by thefreakar"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=45507"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad move, A jump, Select reset, A/Start begin or next level"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ha/harold-6.p8.png; first playable precision puzzle-platformer adaptation with simplified procedural art/audio and host-tested movement, jumping, death-as-corpse, corpse bridge, water drowning, spikes, goal, saved-Harold scoring, and reset rules"
-
-[[games]]
 id = "flatbird"
 title = "FlatBird"
 author = "Hiekichi"
@@ -309,6 +270,19 @@ controls = "A jump, B/Start begin"
 has_assets = true
 migration_date = "2026-04-04"
 notes = "Already 240x240 with gamepad support; Flappy Bird clone"
+
+[[games]]
+id = "freezingknights"
+title = "Freezing Knights"
+author = "tinyevilwizard"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=50683"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad choose path/target/knight, A travel or strike, B potion, Select defend, Start begin or retry"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/fr/freezing_knights-9.p8.png and source https://github.com/tinyevilwizard/FreezingKnights; first playable two-knight snowy RPG adaptation with simplified procedural art/audio and host-tested path/battle/timed-defense/rest/upgrade/wipe rules"
 
 [[games]]
 id = "frogger"
@@ -335,6 +309,32 @@ controls = "D-pad move, A cycle action (water/plant/bonk), B execute, Start begi
 has_assets = true
 migration_date = "2026-04-04"
 notes = "Integer 2x scale from 128x128; added gamepad with cycle+execute action system"
+
+[[games]]
+id = "guncho"
+title = "Guncho"
+author = "spoike; original 7DRL by Arnold Rauers and Terri Vellman"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=48452"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "Left/Right aim, Up/Down action, A use, B next action, Start restart"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/gu/guncho-3.p8.png; first playable turn-based western tactics adaptation with simplified procedural art/audio and host-tested hex movement, revolver shoot/reload, punch/stun, dynamite, enemy turns, camp clear, and boss-victory rules; avoids later commercial release assets"
+
+[[games]]
+id = "haroldsbad"
+title = "Harold's Bad Day"
+author = "biovoid; inspiration and additional graphics by thefreakar"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=45507"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move, A jump, Select reset, A/Start begin or next level"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ha/harold-6.p8.png; first playable precision puzzle-platformer adaptation with simplified procedural art/audio and host-tested movement, jumping, death-as-corpse, corpse bridge, water drowning, spikes, goal, saved-Harold scoring, and reset rules"
 
 [[games]]
 id = "highstakes"
@@ -467,19 +467,6 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/ma/marballs_2-0.p8.png; first playable rolling-ball platformer adaptation with simplified procedural art/audio and host-tested acceleration/friction/jump-pad/orb/goal/wall-bounce/rotated-control rules"
 
 [[games]]
-id = "motionrec"
-title = "MOTION.REC"
-author = "shomaisshi"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=53392"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad move, B jump, Up+A record, A replay, Down+A reverse replay, Select restart, Start begin or retry"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/mo/motionrec-3.p8.png; first playable motion-recording platform-puzzle adaptation with simplified procedural art/audio and host-tested movement/record/replay/reverse/switch/goal/reset rules; original source credits Advanced Micro Platformer Starter Kit"
-
-[[games]]
 id = "mot8ballpool"
 title = "Mot's 8-Ball Pool"
 author = "Mot"
@@ -491,6 +478,19 @@ controls = "Left/Right aim, Up/Down power, A shoot, Select reset"
 has_assets = true
 migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/mo/mot_pool-23.p8.png; first playable 8-ball pool adaptation with simplified procedural art/audio and host-tested aiming, shot power, cue-ball movement, color assignment, fouls, free balls, black-ball win/forfeit, and turn rules"
+
+[[games]]
+id = "motionrec"
+title = "MOTION.REC"
+author = "shomaisshi"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=53392"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move, B jump, Up+A record, A replay, Down+A reverse replay, Select restart, Start begin or retry"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/mo/motionrec-3.p8.png; first playable motion-recording platform-puzzle adaptation with simplified procedural art/audio and host-tested movement/record/replay/reverse/switch/goal/reset rules; original source credits Advanced Micro Platformer Starter Kit"
 
 [[games]]
 id = "nightride"
@@ -519,6 +519,19 @@ migration_date = "2026-06-02"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/of/office_hell_1_0-0.p8.png; first playable one-button puzzle-platformer adaptation because local tooling cannot yet decode newer PICO-8 pxa-compressed Lua"
 
 [[games]]
+id = "pcraft"
+title = "P.Craft"
+author = "NuSan"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=3200"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move, A use/gather/explore/escape, B craft selected recipe, Select cycle recipe, Start restart"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/2/24981.p8.png; first playable island survival/crafting adaptation with simplified procedural art/audio and host-tested island resources, gathering, workbench recipes, axe/sword/boat progression, cave crystal, and escape rules; original thread cites Minicraft inspiration"
+
+[[games]]
 id = "pico8tunesvol1"
 title = "Pico-8 Tunes Volume 1"
 author = "Gruber; code and animations by Krajzeg"
@@ -530,19 +543,6 @@ controls = "D-pad left/right choose track, A/Start play or pause, B/Select reset
 has_assets = true
 migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/3/38440.p8.png; first playable 12-track music-cart/player adaptation with procedural replacement visuals/audio, setlist navigation, play/pause, auto-advance, and host-tested album state; local extraction currently returns no Lua/API/audio data for this cart"
-
-[[games]]
-id = "pinball"
-title = "Pinball"
-author = "Jay Kumogata"
-license = "Apache-2.0"
-source_url = "https://github.com/jay-kumogata/RetroGames"
-original_resolution = "128x128"
-scaling_strategy = "integer-2x-crop"
-controls = "D-pad LEFT/A = left flipper, D-pad RIGHT/B = right flipper, A/Start = restart"
-has_assets = true
-migration_date = "2026-04-04"
-notes = "Integer 2x scale from 128x128, cropped to 240x240"
 
 [[games]]
 id = "picoball"
@@ -558,32 +558,6 @@ migration_date = "2026-06-03"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/pico_ball-5.p8.png; first playable solo/wallball adaptation because local tooling cannot yet decode newer PICO-8 pxa-compressed Lua"
 
 [[games]]
-id = "pigments"
-title = "pigments"
-author = "benjamin_soule"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=40490"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad move and paint, A wait, B/Start restart"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/pigments-0.p8.png; first playable tile-painting pursuit adaptation with simplified procedural art/audio and host-tested pigment droplet, razor disc, grass, water, trigger, and full-paint clear rules"
-
-[[games]]
-id = "pcraft"
-title = "P.Craft"
-author = "NuSan"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=3200"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad move, A use/gather/explore/escape, B craft selected recipe, Select cycle recipe, Start restart"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/2/24981.p8.png; first playable island survival/crafting adaptation with simplified procedural art/audio and host-tested island resources, gathering, workbench recipes, axe/sword/boat progression, cave crystal, and escape rules; original thread cites Minicraft inspiration"
-
-[[games]]
 id = "picocheckmate"
 title = "Pico Checkmate"
 author = "Krystman"
@@ -595,45 +569,6 @@ controls = "D-pad move cursor, A select or move, B cancel, Select restart, Start
 has_assets = true
 migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/5/54038.p8.png; first playable chess adaptation with simplified procedural art/audio and host-tested legal movement, check safety, castling, en passant, promotion, checkmate, and simple AI; omits threefold repetition like the original BBS note"
-
-[[games]]
-id = "picosnail"
-title = "Pico Snail!: Dream Castle"
-author = "GiantLNT / Floofinator"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=39897"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad move, A jump/double jump, B thwack or wand shot, Up collect star, Down switch, Start warp or boss action, Select restart"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/sn/snail-9.p8.png; first playable Dream Castle adaptation with simplified procedural art/audio and host-tested movement, star resource, double jump, wand/thwack attacks, hazards, switch/door, warp, cat boss, and final clear rules; attribution preserves Ujico / Snail's House music/character inspiration noted in source"
-
-[[games]]
-id = "picoworldrace"
-title = "Pico World Race 1.2"
-author = "PAK9"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=46495"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad steer, A/Up gas, B/Down drift, A/Start begin or retry"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pp/ppwr-5.p8.png; first playable racing adaptation with simplified procedural art/audio and host-tested speed/steer/drift/token/lap/opponent rules"
-
-[[games]]
-id = "picoware"
-title = "PICOWARE"
-author = "The PICOWARE team / szczm_"
-license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=34751"
-original_resolution = "128x128"
-scaling_strategy = "native-240"
-controls = "D-pad plus A/B for timed microgame prompts, A/Start begin or retry"
-has_assets = true
-migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/picoware-20.p8.png; first playable microgame-rush subset with simplified procedural art/audio and host-tested prompt/timer/score/life rules"
 
 [[games]]
 id = "picoracer2048"
@@ -649,6 +584,19 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/1/16305.p8.png; first playable vector-racer adaptation with simplified procedural art/audio and host-tested acceleration/brake/boost/curve/wall/lap/AI rules"
 
 [[games]]
+id = "picosnail"
+title = "Pico Snail!: Dream Castle"
+author = "GiantLNT / Floofinator"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=39897"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move, A jump/double jump, B thwack or wand shot, Up collect star, Down switch, Start warp or boss action, Select restart"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/sn/snail-9.p8.png; first playable Dream Castle adaptation with simplified procedural art/audio and host-tested movement, star resource, double jump, wand/thwack attacks, hazards, switch/door, warp, cat boss, and final clear rules; attribution preserves Ujico / Snail's House music/character inspiration noted in source"
+
+[[games]]
 id = "picotennis"
 title = "Pico Tennis"
 author = "paranoidcactus"
@@ -662,17 +610,56 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/picotennis2-0.p8.png; first playable tennis adaptation with simplified procedural art/audio and host-tested serve, rally, offset-based shot angle, power meter, power shots, fault/out scoring, games, sets, and match victory rules"
 
 [[games]]
-id = "porklike"
-title = "Porklike"
-author = "Krystman"
+id = "picoware"
+title = "PICOWARE"
+author = "The PICOWARE team / szczm_"
 license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=37045"
+source_url = "https://www.lexaloffle.com/bbs/?tid=34751"
 original_resolution = "128x128"
 scaling_strategy = "native-240"
-controls = "D-pad move and bump attack, A wait/start/retry, B/Select title"
+controls = "D-pad plus A/B for timed microgame prompts, A/Start begin or retry"
 has_assets = true
 migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/po/porklike-2.p8.png; first playable turn-based dungeon adaptation with simplified procedural art/audio and host-tested movement/combat/item/exit rules"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/picoware-20.p8.png; first playable microgame-rush subset with simplified procedural art/audio and host-tested prompt/timer/score/life rules"
+
+[[games]]
+id = "picoworldrace"
+title = "Pico World Race 1.2"
+author = "PAK9"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=46495"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad steer, A/Up gas, B/Down drift, A/Start begin or retry"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pp/ppwr-5.p8.png; first playable racing adaptation with simplified procedural art/audio and host-tested speed/steer/drift/token/lap/opponent rules"
+
+[[games]]
+id = "pigments"
+title = "pigments"
+author = "benjamin_soule"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=40490"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move and paint, A wait, B/Start restart"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/pi/pigments-0.p8.png; first playable tile-painting pursuit adaptation with simplified procedural art/audio and host-tested pigment droplet, razor disc, grass, water, trigger, and full-paint clear rules"
+
+[[games]]
+id = "pinball"
+title = "Pinball"
+author = "Jay Kumogata"
+license = "Apache-2.0"
+source_url = "https://github.com/jay-kumogata/RetroGames"
+original_resolution = "128x128"
+scaling_strategy = "integer-2x-crop"
+controls = "D-pad LEFT/A = left flipper, D-pad RIGHT/B = right flipper, A/Start = restart"
+has_assets = true
+migration_date = "2026-04-04"
+notes = "Integer 2x scale from 128x128, cropped to 240x240"
 
 [[games]]
 id = "poker"
@@ -686,6 +673,19 @@ controls = "D-pad move cursor, A select/confirm, Start begin"
 has_assets = true
 migration_date = "2026-04-04"
 notes = "Already 240x240 with gamepad support; solo poker card game"
+
+[[games]]
+id = "porklike"
+title = "Porklike"
+author = "Krystman"
+license = "CC BY-NC-SA 4.0"
+source_url = "https://www.lexaloffle.com/bbs/?tid=37045"
+original_resolution = "128x128"
+scaling_strategy = "native-240"
+controls = "D-pad move and bump attack, A wait/start/retry, B/Select title"
+has_assets = true
+migration_date = "2026-06-17"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/po/porklike-2.p8.png; first playable turn-based dungeon adaptation with simplified procedural art/audio and host-tested movement/combat/item/exit rules"
 
 [[games]]
 id = "rolly"
@@ -740,19 +740,6 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/sh/shadowsofdunwich-4.p8.png; first playable turn-based squad-tactics adaptation with simplified procedural art/audio and host-tested action points, movement, shooting, grenades, enemy turns, split enemies, soldier leveling, recruit replacement, and level-16 campaign victory rules"
 
 [[games]]
-id = "stellarblazer"
-title = "StellarBlazer"
-author = "Hiekichi"
-license = "Unlicensed"
-source_url = "https://github.com/Hiekichi/StellarBlazer"
-original_resolution = "240x240"
-scaling_strategy = "native-240"
-controls = "D-pad move, A/B fire blaster or drop bomb, Start begin"
-has_assets = true
-migration_date = "2026-04-04"
-notes = "Already 240x240 with gamepad support; minimal adaptation needed"
-
-[[games]]
 id = "starjump"
 title = "Starjump"
 author = "lucatron / Luca Harris"
@@ -764,6 +751,19 @@ controls = "D-pad move, A jump/double/triple jump, B toggle solid color, Up add 
 has_assets = true
 migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/st/starjump-0.p8.png; first playable vector-platformer adaptation with simplified procedural art/audio and host-tested jump chain, breakable platforms, color toggles, cannon launch, staged progression, timer, wobble-style rendering, and final return-to-start clear rules"
+
+[[games]]
+id = "stellarblazer"
+title = "StellarBlazer"
+author = "Hiekichi"
+license = "Unlicensed"
+source_url = "https://github.com/Hiekichi/StellarBlazer"
+original_resolution = "240x240"
+scaling_strategy = "native-240"
+controls = "D-pad move, A/B fire blaster or drop bomb, Start begin"
+has_assets = true
+migration_date = "2026-04-04"
+notes = "Already 240x240 with gamepad support; minimal adaptation needed"
 
 [[games]]
 id = "subsurface"
@@ -844,17 +844,17 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/na/nano_villager-0.p8.png; first playable relaxing city-builder adaptation with simplified procedural art/audio and host-tested gathering, houses, arrivals, farms, workshops, taverns, food, happiness, production, and peeple-leaving rules"
 
 [[games]]
-id = "woodworm"
-title = "Woodworm"
-author = "spratt"
+id = "whiplashtaxi"
+title = "Whiplash Taxi Co"
+author = "Mot"
 license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=142717"
+source_url = "https://www.lexaloffle.com/bbs/?tid=53583"
 original_resolution = "128x128"
 scaling_strategy = "native-240"
-controls = "D-pad move, B undo, Select reset, A/Start begin or retry"
+controls = "D-pad Left/Right steer, A/Up accelerate, B/Down brake or reverse, Select restart"
 has_assets = true
 migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/wo/woodworm-0.p8.png; first playable Snakebird-like wood puzzle adaptation with simplified procedural art/audio and host-tested movement/eating/undo/gravity/goal rules"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/mo/mot_taxi-7.p8.png; first playable taxi-delivery adaptation with simplified procedural art/audio and host-tested acceleration, deliberate reverse switching, crashes, passenger pickup, destination dropoff, fare scoring, and five-minute shift timer rules; avoids third-party taxi/action-game branding/assets"
 
 [[games]]
 id = "wobblepaint"
@@ -870,17 +870,17 @@ migration_date = "2026-06-17"
 notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/wo/wobblepaint-6.p8.png; first playable handheld drawing-toy adaptation with simplified procedural art/audio and host-tested cursor movement, brush dabs, color cycling, brush sizing, undo, clear, and wobble animation rules"
 
 [[games]]
-id = "whiplashtaxi"
-title = "Whiplash Taxi Co"
-author = "Mot"
+id = "woodworm"
+title = "Woodworm"
+author = "spratt"
 license = "CC BY-NC-SA 4.0"
-source_url = "https://www.lexaloffle.com/bbs/?tid=53583"
+source_url = "https://www.lexaloffle.com/bbs/?tid=142717"
 original_resolution = "128x128"
 scaling_strategy = "native-240"
-controls = "D-pad Left/Right steer, A/Up accelerate, B/Down brake or reverse, Select restart"
+controls = "D-pad move, B undo, Select reset, A/Start begin or retry"
 has_assets = true
 migration_date = "2026-06-17"
-notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/mo/mot_taxi-7.p8.png; first playable taxi-delivery adaptation with simplified procedural art/audio and host-tested acceleration, deliberate reverse switching, crashes, passenger pickup, destination dropoff, fare scoring, and five-minute shift timer rules; avoids third-party taxi/action-game branding/assets"
+notes = "Ported from PICO-8 cart https://www.lexaloffle.com/bbs/cposts/wo/woodworm-0.p8.png; first playable Snakebird-like wood puzzle adaptation with simplified procedural art/audio and host-tested movement/eating/undo/gravity/goal rules"
 
 [[games]]
 id = "xmaspong"
