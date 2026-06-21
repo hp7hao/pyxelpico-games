@@ -35,20 +35,16 @@ python3 scripts/pico8_top100_status.py --status blocked-license
 python3 scripts/pico8_top100_status.py --status blocked-ip-risk
 ```
 
-As of 2026-06-17 after the Night Ride port, the strict FCDB
-like-ranked top 100 has 38 migrated, 11 eligible for candidate audit, 36 blocked
-by missing license metadata, and 15 blocked by obvious derivative-IP risk. These counts are
-computed by `scripts/pico8_top100_status.py` from FCDB plus `games.toml`.
+As of 2026-06-22, the strict FCDB like-ranked top 100 has 49 migrated,
+0 eligible for candidate audit, 36 blocked by missing license metadata, and
+15 blocked by obvious derivative-IP risk. These counts are computed by
+`scripts/pico8_top100_status.py` from FCDB plus `games.toml`; rerun the status
+command instead of hand-maintaining counts.
 
 ## Current Progress
 
-Current migrated strict top-100 ports are rank 2 `Just One Boss`, rank 4
-`Birds With Guns`, rank 8 `High Stakes`, rank 12 `Buns: Bunny survivor`,
-rank 13 `Porklike`, rank 14 `PICOWARE`, rank 18 `Mai-Chan's Sweet Buns`,
-rank 24 `X-Zero`, rank 26 `Pico World Race 1.2`, rank 27 `Combo Pool`,
-rank 32 `Into Ruins`, rank 35 `To a Starling`, rank 36 `Woodworm`, and rank 37
-`BAS`, rank 41 `UFO Swamp Odyssey`, rank 42 `PICORACER-2048`, and rank 44
-`Air Delivery`, rank 46 `Marballs 2`, rank 48 `Freezing Knights`, rank 49
-`The Lost Night Release`, rank 52 `Pico Checkmate`, rank 55 `Little Dragon Adventure`, rank 59 `Trial of the Sorcerer`, rank 60 `MOTION.REC`, rank 61 `P.Craft`, rank 62 `8 Legs to Love`, rank 64 `Guncho`, rank 65 `Rolly`, rank 68 `pigments`, rank 69 `Cherry Bomb`, rank 72 `Advanced Micro Platformer - Starter Kit`, rank 73 `Scrap Boy`, rank 74 `Shadows of Dunwich 2.0`, rank 75 `Pico Tennis`, rank 76 `Driftmania`, rank 79 `Wobblepaint`, rank 80 `Whiplash Taxi Co`, rank 81 `Night Ride`, rank 85 `Pico-8 Tunes Volume 1`, rank 89 `Cab Ride`, rank 90 `Two Hiking Cats`, rank 91 `Harold's Bad Day`, rank 93 `Brutal Pico Race`, rank 94 `subsurface`, rank 95 `DUNGEON!`, rank 96 `Mot's 8-Ball Pool`, and rank 97 `Villager`. Rank 17 `Marble Merger`, rank 45 `Demon Castle`, rank 51 `Nanoman`, and rank 71 `Breakout Hero`
-are blocked for derivative-IP risk from FCDB tags/thread evidence. The next
-eligible candidate is rank 98 `Pico Snail!: Dream Castle` (`id=82864`, author `GiantLNT`, license `CC4-BY-NC-SA`).
+The strict top-100 queue is drained: every candidate is currently classified as
+`migrated`, `blocked-license`, or `blocked-ip-risk` by the status command.
+There is no current `todo` candidate. Rank 98 `Pico Snail!: Dream Castle` and
+rank 100 `Starjump` are now migrated, so do not treat older notes that name
+rank 98 as the next eligible candidate as current planning authority.

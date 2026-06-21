@@ -8,6 +8,7 @@ tracker. Per-port state still lives in games.toml and the porting backlog.
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import html
 import json
 from pathlib import Path
@@ -19,6 +20,9 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 MONOREPO_DIR = ROOT_DIR.parents[1]
 FCDB_BBS_RELEASE = MONOREPO_DIR / "projects" / "fcdb" / "sources" / "pico8" / "bbs_release.json"
 GAMES_TOML = ROOT_DIR / "games.toml"
+TRACKER_MD = ROOT_DIR / "agent-state" / "pico8-top100-migration.md"
+PORTING_BACKLOG_MD = ROOT_DIR / "agent-state" / "porting-backlog.md"
+STALE_VERIFICATION_PENDING_PHRASE = "verification pending in this session note until the final command pass completes"
 
 IP_RISK_PATTERNS = {
     "celeste": "commercial/third-party IP demake",
@@ -171,14 +175,57 @@ def _rows(limit: int) -> list[dict[str, object]]:
 
 
 def _print_summary(rows: list[dict[str, object]]) -> None:
-    counts: dict[str, int] = {}
-    for row in rows:
-        counts[str(row["status"])] = counts.get(str(row["status"]), 0) + 1
+    counts = Counter(str(row["status"]) for row in rows)
 
     total = len(rows)
     print(f"PICO-8 BBS top {total} -> PyxelPico migration status")
     for key in ("migrated", "todo", "blocked-license", "blocked-ip-risk"):
         print(f"  {key}: {counts.get(key, 0)}")
+
+
+def _check_tracker_summary(rows: list[dict[str, object]]) -> int:
+    if not TRACKER_MD.exists():
+        print(f"missing tracker markdown: {TRACKER_MD}", file=sys.stderr)
+        return 2
+
+    text = TRACKER_MD.read_text(encoding="utf-8")
+    counts = Counter(str(row["status"]) for row in rows)
+    expected = {
+        "migrated": counts.get("migrated", 0),
+        "todo": counts.get("todo", 0),
+        "blocked-license": counts.get("blocked-license", 0),
+        "blocked-ip-risk": counts.get("blocked-ip-risk", 0),
+    }
+    summary_patterns = {
+        "migrated": rf"{expected['migrated']}\s+[^\n]*migrated|migrated[^\n]*{expected['migrated']}",
+        "todo": rf"{expected['todo']}\s+[^\n]*eligible|todo[^\n]*{expected['todo']}",
+        "blocked-license": rf"{expected['blocked-license']}\s+[^\n]*missing license|blocked-license[^\n]*{expected['blocked-license']}",
+        "blocked-ip-risk": rf"{expected['blocked-ip-risk']}\s+[^\n]*derivative-IP|blocked-ip-risk[^\n]*{expected['blocked-ip-risk']}",
+    }
+    missing = []
+    for key, pattern in summary_patterns.items():
+        if not re.search(pattern, text, flags=re.IGNORECASE):
+            missing.append(f"{key}={expected[key]}")
+
+    todo_count = expected["todo"]
+    if todo_count == 0 and not re.search(r"no current `todo` candidate|0 eligible for candidate audit", text):
+        missing.append("no-current-todo wording")
+
+    if missing:
+        print("tracker summary drift: " + ", ".join(missing), file=sys.stderr)
+        return 1
+
+    if PORTING_BACKLOG_MD.exists():
+        backlog_text = PORTING_BACKLOG_MD.read_text(encoding="utf-8")
+        if STALE_VERIFICATION_PENDING_PHRASE in backlog_text:
+            print(
+                "porting backlog verification-status drift: stale pending phrase remains",
+                file=sys.stderr,
+            )
+            return 1
+
+    print("tracker summary matches computed top-100 status")
+    return 0
 
 
 def _print_table(rows: list[dict[str, object]], status_filter: str | None) -> None:
@@ -203,6 +250,11 @@ def main() -> int:
         help="filter table rows by computed status",
     )
     parser.add_argument("--json", action="store_true", help="emit machine-readable JSON")
+    parser.add_argument(
+        "--check-tracker",
+        action="store_true",
+        help="verify agent-state/pico8-top100-migration.md matches computed counts",
+    )
     args = parser.parse_args()
 
     if not FCDB_BBS_RELEASE.exists():
@@ -213,6 +265,9 @@ def main() -> int:
         return 2
 
     rows = _rows(args.limit)
+    if args.check_tracker:
+        return _check_tracker_summary(rows)
+
     if args.json:
         print(json.dumps(rows, indent=2))
         return 0

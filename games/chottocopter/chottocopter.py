@@ -4,9 +4,14 @@ Adapted for Pico8Go (240x240, 8-button gamepad).
 Original by Hiekichi.
 """
 import os
+import sys
 import pyxel
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(SCRIPT_DIR, "..", "..", "lib"))
+import input_helper as ih  # noqa: E402
+
+DIGITAL_AXIS_VALUE = 32768
 
 # ブローダーバンドと呼ぶかブローダーボンドと呼ぶかとなどと些細なことで争っていた時代もありました
 ### グローバル変数
@@ -30,6 +35,17 @@ count_board = 0     # 現在ヘリに搭乗している人数
 count_rescued = 0   # 基地に無事帰還できた人数
 gameover_cnt = 0  # ゲームオーバー（ヘリ爆発）になった後のメッセージ表示用
 gameend_cnt = 0   # ゲームエンド（全員救出か死亡）になった後のメッセージ表示用
+
+def digital_axis(negative_pressed, positive_pressed):
+    return (int(positive_pressed) - int(negative_pressed)) * DIGITAL_AXIS_VALUE
+
+def movement_axis_x():
+    digital = digital_axis(ih.btn_left(), ih.btn_right())
+    return digital if digital else pyxel.btnv(pyxel.GAMEPAD1_AXIS_LEFTX)
+
+def movement_axis_y():
+    digital = digital_axis(ih.btn_up(), ih.btn_down())
+    return digital if digital else pyxel.btnv(pyxel.GAMEPAD1_AXIS_LEFTY)
 
 def init_global_variable():
     global bullet1s,bullet2s,hiteffect1s,hiteffect2s,hiteffectt1s,hiteffectt2s,stars,rescuers,smilers,cabins,tanks,planes,count_died,count_board,count_rescued,missiles,gameover_cnt,gameend_cnt
@@ -587,10 +603,10 @@ class App():
                 ufo.activate(copter.x + 240, pyxel.rndi(-30,0))
 
         ### ジョイパッドの入力判定（自機の移動などに反映）
-        ## アナログ左ステックで自機の移動など
+        ## Pico8Go D-pad/keyboard movement, with analog axis fallback for desktop pads
         if not copter.is_stay:
-            self.gamepad_lx = pyxel.btnv(pyxel.GAMEPAD1_AXIS_LEFTX)
-            self.gamepad_ly = pyxel.btnv(pyxel.GAMEPAD1_AXIS_LEFTY)
+            self.gamepad_lx = movement_axis_x()
+            self.gamepad_ly = movement_axis_y()
             if copter.land_flag: # 着地中は左右移動できず、飛び立つとき急加速
                 self.gamepad_lx = 0
                 self.gamepad_ly *= 100
@@ -602,7 +618,7 @@ class App():
         ### AボタンとBボタンは飛行中だけ反応しますよ
         if copter.land_flag == False:
             ### Aボタンで機体の向きを変える
-            if pyxel.btnp(pyxel.GAMEPAD1_BUTTON_A):
+            if ih.btnp_a():
                 if copter.style == 1:
                     if copter.force_x < 0:
                         copter.style = 0
@@ -611,7 +627,7 @@ class App():
                 else:
                     copter.style = 1
             ### Bボタンで弾を発射        
-            if pyxel.btnp(pyxel.GAMEPAD1_BUTTON_B):
+            if ih.btnp_b():
                 if copter.style == 0: # 左向き
                     x = copter.x + 8        #鼻先
                     y = copter.y + 10   #ちょっと下

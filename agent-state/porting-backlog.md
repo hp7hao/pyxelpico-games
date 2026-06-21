@@ -419,7 +419,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/sh/shadowsofdunwich-4.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Scrap Boy; original turn-based squad tactics maps cleanly to host-tested deterministic rules and D-pad cursor controls.
 - Risks: The live cart downloads but current local extraction returns empty Lua/API text. Original procedural maps, 3D sprite system, full talent tree, 16-level balance, save behavior, exact enemies, original sprite art, music, and visual flair are outside this first playable pass. BBS text calls it X-Com-like, so this pass uses generic occult squad-tactics presentation and no third-party branded assets.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL, BBS mechanics/campaign notes, and extraction limitation; added first playable PyxelPico adaptation (`games/shadowsofdunwich/shadowsofdunwich.py`) with host-tested action points, squad movement, shooting, grenades, enemy turns, splitter spawns, soldier leveling, recruit replacement, campaign advancement, level-16 victory, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL, BBS mechanics/campaign notes, and extraction limitation; added first playable PyxelPico adaptation (`games/shadowsofdunwich/shadowsofdunwich.py`) with host-tested action points, squad movement, shooting, grenades, enemy turns, splitter spawns, soldier leveling, recruit replacement, campaign advancement, level-16 victory, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 75. Pico Tennis
 
@@ -430,7 +430,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/pi/picotennis2-0.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Shadows of Dunwich 2.0; tennis maps cleanly to a compact handheld loop with D-pad movement, A hit/serve, and B power shot.
 - Risks: FCDB's numeric cart URL 404s; the live slug cart downloads but current local extraction returns empty Lua/API text. Original 3D rendering system, multiplayer, exact ball physics, full AI, original sprite/label art, and music are outside this first playable pass.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL, BBS controls/scoring/mechanics notes, and extraction limitation; added first playable PyxelPico adaptation (`games/picotennis/picotennis.py`) with host-tested serve, rally, offset-based shot angle, power meter, power shots, fault/out scoring, games, sets, match victory, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL, BBS controls/scoring/mechanics notes, and extraction limitation; added first playable PyxelPico adaptation (`games/picotennis/picotennis.py`) with host-tested serve, rally, offset-based shot angle, power meter, power shots, fault/out scoring, games, sets, match victory, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 76. Driftmania
 
@@ -441,7 +441,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/dr/driftmania-5.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Pico Tennis; original time-trial drift racing has clear controls, track/medal goals, and an extractable cart.
 - Risks: The original credits music by Vav, cars based on art by PixelArtM, cover art by TerracotaScarf, and helper/inspiration credits; this first pass uses procedural replacement art/audio and records the upstream chain. Full 15-track campaign, ghost replay, garage customization, options, exact 3D sprite-stacking rendering, and speedrun tuning are outside this first playable pass.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS controls/track/medal/contributor notes, and extractable minified Lua; added first playable PyxelPico adaptation (`games/driftmania/driftmania.py`) with host-tested acceleration, braking/reverse, steering, drift-brake rotation, grass traction, boost tiles, checkpoints, lap timing, medal scoring, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS controls/track/medal/contributor notes, and extractable minified Lua; added first playable PyxelPico adaptation (`games/driftmania/driftmania.py`) with host-tested acceleration, braking/reverse, steering, drift-brake rotation, grass traction, boost tiles, checkpoints, lap timing, medal scoring, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 79. Wobblepaint 1.6
 
@@ -452,7 +452,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/wo/wobblepaint-6.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Driftmania; although it is a paint tool, the BBS explicitly documents gamepad controls that fit Pico8Go handheld input.
 - Risks: FCDB's numeric cart URL is stale and local extraction returns empty Lua/API text for the live cart. Original menus, presets, pattern/shape system, multi-doodle storage, paste/export format, GIF capture, self-saving cart data, and exact wobble rendering are outside this first playable pass.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS gamepad/tool controls, and extraction limitation; added first playable PyxelPico adaptation (`games/wobblepaint/wobblepaint.py`) with host-tested cursor movement, brush dabs, color cycling, brush sizing, undo, clear, wobble animation, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS gamepad/tool controls, and extraction limitation; added first playable PyxelPico adaptation (`games/wobblepaint/wobblepaint.py`) with host-tested cursor movement, brush dabs, color cycling, brush sizing, undo, clear, wobble animation, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 80. Whiplash Taxi Co
 
@@ -463,7 +463,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/mo/mot_taxi-7.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Wobblepaint; original passenger-delivery driving loop has clear source/license evidence and an extractable cart.
 - Risks: BBS comments compare it to Crazy Taxi/GTA, so this pass uses generic taxi delivery presentation and no third-party branded assets. Original 3D rendering, Motsville map, AI traffic, free-explore/race modes, lap records, music, exact driving feel, and full customer set are outside this first playable pass.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS pickup/destination/timer/free-explore/race notes, deliberate reverse behavior, and extractable Lua/API; added first playable PyxelPico adaptation (`games/whiplashtaxi/whiplashtaxi.py`) with host-tested acceleration, steering, stop-before-reverse, crash bounce, passenger pickup, destination dropoff, fare scoring, five-minute timer, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS pickup/destination/timer/free-explore/race notes, deliberate reverse behavior, and extractable Lua/API; added first playable PyxelPico adaptation (`games/whiplashtaxi/whiplashtaxi.py`) with host-tested acceleration, steering, stop-before-reverse, crash bounce, passenger pickup, destination dropoff, fare scoring, five-minute timer, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 81. Night Ride
 
@@ -474,7 +474,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/ni/nightride-0.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Whiplash Taxi Co; original night driving/shooter/boss loop has clear source/license evidence and extractable cart code.
 - Risks: BBS comments compare it to Spy Hunter, so this pass uses generic night-road shooter presentation and no third-party branded assets. Original level scripts, particles, car rotation art, traffic variety, music, exact shooting escalation, boss patterns, and sunrise ending art are outside this first playable pass.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS night-driving/shooter/boss notes, and extractable Lua/API; added first playable PyxelPico adaptation (`games/nightride/nightride.py`) with host-tested lane changes, traffic collisions, level progression, weapon unlock, shooting, boss damage, health, score, sunrise victory, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS night-driving/shooter/boss notes, and extractable Lua/API; added first playable PyxelPico adaptation (`games/nightride/nightride.py`) with host-tested lane changes, traffic collisions, level progression, weapon unlock, shooting, boss damage, health, score, sunrise victory, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 85. Pico-8 Tunes Volume 1
 
@@ -485,7 +485,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/3/38440.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Night Ride; BBS author text says the 12 two-channel tunes are intended for reuse, and Krajzeg confirms the code/sprites/assets are under the same Creative Commons umbrella.
 - Risks: This is a music/demo cart rather than a conventional game. The current local extractor downloads the live cart but returns no Lua/API/audio data, so this first pass targets a controller-friendly album player with generated replacement Pyxel audio/visuals rather than exact SFX/music parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL from the BBS thread, and captured the explicit reuse/Creative Commons evidence; added first playable PyxelPico adaptation (`games/pico8tunesvol1/pico8tunesvol1.py`) with host-tested 12-track setlist, next/previous selection, play/pause, reset, auto-advance, deterministic visualizer state, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL from the BBS thread, and captured the explicit reuse/Creative Commons evidence; added first playable PyxelPico adaptation (`games/pico8tunesvol1/pico8tunesvol1.py`) with host-tested 12-track setlist, next/previous selection, play/pause, reset, auto-advance, deterministic visualizer state, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 89. Cab Ride
 
@@ -496,7 +496,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/ca/cab_ride-7.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Pico-8 Tunes Volume 1; original is a relaxed train simulator with clear controls, passenger/station goals, explicit all-source/assets CC BY-NC-SA license, and extractable cart source/API.
 - Risks: Original has a sophisticated pseudo-3D route renderer, long-run route generation, city/tunnel/weather variety, second train, soundtrack, pause menu, express/very-chilled presentation, and exact station scoring polish; first pass targets the core handheld train loop rather than full renderer/source parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL from the BBS thread, extracted readable Lua/API surface, and preserved the Powersaurus/rych-t/Mot credit chain; added first playable PyxelPico adaptation (`games/cabride/cabride.py`) with host-tested throttle/brake, station approach, door gating, passengers, stop ratings, express mode, last-station journey completion, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, corrected live cart URL from the BBS thread, extracted readable Lua/API surface, and preserved the Powersaurus/rych-t/Mot credit chain; added first playable PyxelPico adaptation (`games/cabride/cabride.py`) with host-tested throttle/brake, station approach, door gating, passengers, stop ratings, express mode, last-station journey completion, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 90. Two Hiking Cats Have An In Depth Discussion About Life The Universe And Everything
 
@@ -507,7 +507,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/1/16151.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Cab Ride; original BBS post clearly describes a non-game scrolling art toy with speed, palette, and reset controls.
 - Risks: This is intentionally not a traditional game. Local extraction returns only a tiny invalid fragment for the live cart, so this pass follows BBS-described behavior rather than source/API parity. Original exact line/circle/modulo composition, cat animation timings, footstep audio, and palette math are outside this first playable pass.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live numeric cart URL, BBS controls/author intent/commentary evidence, and extraction blocker; added first playable PyxelPico adaptation (`games/twohikingcats/twohikingcats.py`) with host-tested speed changes, deterministic palette randomization, reset, scroll advancement, alternating/manual meows, cat bobbing, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live numeric cart URL, BBS controls/author intent/commentary evidence, and extraction blocker; added first playable PyxelPico adaptation (`games/twohikingcats/twohikingcats.py`) with host-tested speed changes, deterministic palette randomization, reset, scroll advancement, alternating/manual meows, cat bobbing, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 91. Harold's Bad Day
 
@@ -518,7 +518,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/ha/harold-6.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Two Hiking Cats; original source extracts and BBS describes a precision puzzle-platformer where dying can be part of the solution, with 32 levels and speedrun/save-as-many scoring.
 - Risks: Original has 32 authored levels, exact platformer physics, corpse puzzle routing, water/music muffling, wind, arrows, fire, doors, palette fading, particles, soundtrack, and speedrun timing polish; first pass targets a compact death-as-tool puzzle-platformer loop rather than full map/source parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS mechanics/level-count notes, and biovoid/thefreakar credits; added first playable PyxelPico adaptation (`games/haroldsbad/haroldsbad.py`) with host-tested movement, jumping, deaths, corpse bridge, water drowning, spikes, goal clear, saved-Harold scoring, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS mechanics/level-count notes, and biovoid/thefreakar credits; added first playable PyxelPico adaptation (`games/haroldsbad/haroldsbad.py`) with host-tested movement, jumping, deaths, corpse bridge, water drowning, spikes, goal clear, saved-Harold scoring, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 93. Brutal Pico Race
 
@@ -529,7 +529,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/br/brutalpicorace_104-0.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Harold's Bad Day; original has clear BBS controls/features, live 1.0.4 cart, extractable Lua/API, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original has six tracks, three ship classes, split-screen multiplayer, several AI levels, pseudo-3D road/ship rendering, ship editor/history, drafting, health, boost, lap timeboards, music, and dense HUD polish; first pass targets a compact single-player futuristic racing loop rather than full renderer/source parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS controls/features/changelog notes, and dhostin/community credits; added first playable PyxelPico adaptation (`games/brutalpicorace/brutalpicorace.py`) with host-tested ship classes, acceleration/brake, boost meter, wall damage, drafting, AI progress, lap finish, ranking, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS controls/features/changelog notes, and dhostin/community credits; added first playable PyxelPico adaptation (`games/brutalpicorace/brutalpicorace.py`) with host-tested ship classes, acceleration/brake, boost meter, wall damage, drafting, AI progress, lap finish, ranking, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 94. subsurface
 
@@ -540,7 +540,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/su/subsurface-2.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Brutal Pico Race; original has clear BBS controls/features, live 1.0.2 cart, extractable Lua/API, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original has a 40-screen metroidvania map, 6 upgrades, save points, story captions, about 6 enemies, one boss, precise wall-jump/glide/swim tuning, switch routing, health upgrades, and final platforming/boss polish; first pass targets a compact upgrade-gated exploration loop rather than full map/source parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS 40-screen/upgrade/control notes, and JulianR credits; added first playable PyxelPico adaptation (`games/subsurface/subsurface.py`) with host-tested upgrades, double jump, wall jump, glide, swim gating, shooting, enemies, water hazard, boss damage, victory, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS 40-screen/upgrade/control notes, and JulianR credits; added first playable PyxelPico adaptation (`games/subsurface/subsurface.py`) with host-tested upgrades, double jump, wall jump, glide, swim gating, shooting, enemies, water hazard, boss damage, victory, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 95. DUNGEON!
 
@@ -551,7 +551,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/du/dungeon-0.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after subsurface; original has clear BBS controls/features, live cart, CC BY-NC-SA metadata, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original has randomly selected/preset dungeon courses, a variety of enemies, coins, gift-shop upgrades, weapons, wall jumping, zones with different visuals/music, quips/dialogue, and a final rescue sequence; local extraction exposes compressed/minified initialization and data strings rather than practical source parity, so first pass targets a compact roguelite platformer loop.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS roguelite-platformer/shop/control notes, and partial compressed extraction; added first playable PyxelPico adaptation (`games/dungeonbang/dungeonbang.py`) with host-tested wall jumping, enemies, coins, shop powerups, attacks/weapons, depth/zone progression, portal exits, final rescue, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, BBS roguelite-platformer/shop/control notes, and partial compressed extraction; added first playable PyxelPico adaptation (`games/dungeonbang/dungeonbang.py`) with host-tested wall jumping, enemies, coins, shop powerups, attacks/weapons, depth/zone progression, portal exits, final rescue, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 96. Mot's 8-Ball Pool
 
@@ -562,7 +562,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/mo/mot_pool-23.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after DUNGEON!; original has clear BBS rules/features, live cart, extractable Lua/API, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original is a polished 3D 8-ball pool simulation with ball-ball physics, camera transitions, AI opponents, place-ball UI, simplified but broad rule handling, ticker messages, and HUD polish; first pass targets a compact top-down/3D-inspired two-player rule core rather than full physics/render/source parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS simplified-rule notes, and Mot credits; added first playable PyxelPico adaptation (`games/mot8ballpool/mot8ballpool.py`) with host-tested aiming, shot power, cue-ball movement, pocket resolution, color assignment, fouls, free balls, black-ball win/forfeit, turn state, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS simplified-rule notes, and Mot credits; added first playable PyxelPico adaptation (`games/mot8ballpool/mot8ballpool.py`) with host-tested aiming, shot power, cue-ball movement, pocket resolution, color assignment, fouls, free balls, black-ball win/forfeit, turn state, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 97. Villager
 
@@ -573,7 +573,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/na/nano_villager-0.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Mot's 8-Ball Pool; original has clear BBS mechanics, live cart, extractable Lua/API, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original is a polished relaxing city-builder with generated island/map data, Cluly-inspired tile presentation, many objects/building types, peeple pathing, production/hunger/happiness, particles/ambience, and a two-button UI; first pass targets a compact city-builder loop rather than full world/source parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS resource/building/peeple/no-save notes, and partnano/Cluly inspiration credits; added first playable PyxelPico adaptation (`games/villager/villager.py`) with host-tested resource gathering, houses, arrivals, farms, workshops, taverns, food, happiness, production, peeple leaving, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS resource/building/peeple/no-save notes, and partnano/Cluly inspiration credits; added first playable PyxelPico adaptation (`games/villager/villager.py`) with host-tested resource gathering, houses, arrivals, farms, workshops, taverns, food, happiness, production, peeple leaving, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 98. Pico Snail!: Dream Castle
 
@@ -584,7 +584,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/sn/snail-9.p8.png
 - Why: next eligible strict FCDB BBS top-100 candidate after Villager; original has clear CC metadata, live cart, extractable Lua/API, explicit remix permission in the thread, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original is a polished platform adventure with authored rooms, saved level unlocks, books/story text, warps, switches, doors, hazards, stars, a cat encounter, original background renderers, sprite animation, and Snail's House / Ujico music-character inspiration; first pass targets a compact Dream Castle loop rather than full map/source/audio parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS modify/remix permission, and Floofinator/Ujico credits; added first playable PyxelPico adaptation (`games/picosnail/picosnail.py`) with host-tested movement, star collection, double jump, wand shots, thwack attacks, hazards, switch/door, warp, cat boss, final clear, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, extractable Lua/API surface, BBS modify/remix permission, and Floofinator/Ujico credits; added first playable PyxelPico adaptation (`games/picosnail/picosnail.py`) with host-tested movement, star collection, double jump, wand shots, thwack attacks, hazards, switch/door, warp, cat boss, final clear, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### Top 100 rank 100. Starjump
 
@@ -595,7 +595,7 @@ Policy:
 - Cart: https://www.lexaloffle.com/bbs/cposts/st/starjump-0.p8.png
 - Why: final eligible strict FCDB BBS top-100 candidate; original has clear CC metadata, live cart, BBS controls/options/mechanics notes, and no obvious derivative-IP tag/thread evidence.
 - Risks: Original is a polished vector-style precision platformer with authored screen progression, wobble options, timer/progress menu, breakable/disappearing platforms, toggled floor/wall colors, red balloon/cannon sections, external soundtrack, and save/progress behavior; first pass targets a compact vector-platformer loop rather than exact room/source/audio parity.
-- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, partial extractable Lua/API surface, BBS controls/options, and community mechanics notes; added first playable PyxelPico adaptation (`games/starjump/starjump.py`) with host-tested jump chain, double/triple jump charges, breakable platforms, color toggles, cannon launch, staged progression, timer, final clear, cover, attribution, manifest, and credits; verification pending in this session note until the final command pass completes.
+- 2026-06-17 progress note: Confirmed FCDB/BBS/license metadata, live cart URL, partial extractable Lua/API surface, BBS controls/options, and community mechanics notes; added first playable PyxelPico adaptation (`games/starjump/starjump.py`) with host-tested jump chain, double/triple jump charges, breakable platforms, color toggles, cannon launch, staged progression, timer, final clear, cover, attribution, manifest, and credits; combined top-100 status, py_compile, cart packaging, and diff-hygiene verification passed.
 
 ### 1. 2048
 
