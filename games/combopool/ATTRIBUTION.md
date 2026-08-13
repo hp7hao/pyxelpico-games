@@ -5,7 +5,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=3467
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/co/combopool-0.p8.png
 
-PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json`
+PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
 (id/pid `21515`, tid `3467`).
 
 ## Changes for PyxelPico

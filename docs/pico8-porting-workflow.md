@@ -30,7 +30,7 @@ Read these before porting:
 - `projects/pyxelpico/docs/specs/game_manifest_spec.md`
 - `projects/pyxelpico/docs/specs/pyxel_game_execution_spec.md`
 - `projects/pyxelpico/docs/specs/pico8_sound_engine_spec.md`
-- `projects/fcdb/sources/pico8/bbs_release.json`
+- `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
 
 Useful local tools/libraries:
 
@@ -77,7 +77,7 @@ Initial local-FCDB shortlist, easy to hard:
 
 ### 1. Preflight
 
-1. Find candidate in `projects/fcdb/sources/pico8/bbs_release.json`.
+1. Find candidate in `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`.
 2. Confirm license/source URL/cart URL.
 3. Download or locate the cart only if permitted by the workflow.
 4. Use `picotool` or equivalent extraction to list Lua and inspect cart sections.

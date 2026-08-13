@@ -6,7 +6,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=153606
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/ra/ramgadofu-1.p8.png
 
-PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json` (id/pid `179971`, tid `153606`, slug `ramgadofu`).
+PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json` (id/pid `179971`, tid `153606`, slug `ramgadofu`).
 
 ## Changes for PyxelPico
 

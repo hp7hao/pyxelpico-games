@@ -6,7 +6,7 @@
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/li/lightwalk-0.p8.png
 **Upstream source**: https://github.com/juliusspeak/lightwalk
 
-PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json` (id `181886`, tid `154308`).
+PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json` (id `181886`, tid `154308`).
 
 ## Changes for PyxelPico
 

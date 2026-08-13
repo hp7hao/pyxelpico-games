@@ -5,7 +5,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=2243
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/1/16305.p8.png
 
-PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json`
+PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
 (id `12408`, thread tid `2243`; live cart id `16305` from the BBS thread).
 
 ## Changes for PyxelPico

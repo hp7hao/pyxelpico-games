@@ -6,7 +6,7 @@
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/ba/bas-9.p8.png
 **GitHub source trail**: https://github.com/yokoboko/bas-pico-8
 
-PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json`
+PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
 (id/pid `137287`, tid `54986`).
 
 ## Changes for PyxelPico

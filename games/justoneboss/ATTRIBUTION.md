@@ -6,7 +6,7 @@
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/49234.p8.png
 **Local source trail**: `projects/picovibe/carts/pico8pixelbomb/justoneboss-pico8gomod/justonebossmod.p8`
 
-PICO-8 metadata source: `projects/fcdb/sources/pico8/bbs_release.json`
+PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
 (id/pid `49234`, tid `49234`).
 
 ## Changes for PyxelPico

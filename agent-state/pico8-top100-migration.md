@@ -2,7 +2,7 @@
 
 This track covers manual PICO-8 BBS fan-favorite ports into PyxelPico Python
 games. The ranked candidate set is the top 100 by `extension.likes` in
-`projects/fcdb/sources/pico8/bbs_release.json`, matching the FCDB
+`projects/fcdb/platforms/pico8/metadata/sources/bbs.json`, matching the FCDB
 `bbs-fan-favorites` curated list semantics.
 
 ## Policy
