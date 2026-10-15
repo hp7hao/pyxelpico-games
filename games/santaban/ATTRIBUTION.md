@@ -5,7 +5,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=153450
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/sa/santaban-3.p8.png
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json` (id/pid `179484`, tid `153450`).
+PICO-8 metadata source: FCDB PICO-8 bbs metadata (id/pid `179484`, tid `153450`).
 
 ## Changes for PyxelPico
 

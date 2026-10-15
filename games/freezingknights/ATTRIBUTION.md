@@ -7,7 +7,7 @@
 **Source (GitHub)**: https://github.com/tinyevilwizard/FreezingKnights
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/fr/freezing_knights-9.p8.png
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `122532`, tid `50683`; live cart id `freezing_knights-9` from the
 BBS thread and GitHub source repository).
 

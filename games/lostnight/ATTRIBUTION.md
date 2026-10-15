@@ -5,7 +5,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=41791
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/th/the_lost_night-6.p8.png
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `88259`, tid `41791`; live cart id `the_lost_night-6` from the BBS
 thread).
 

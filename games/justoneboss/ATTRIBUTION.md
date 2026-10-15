@@ -4,9 +4,9 @@
 **License**: CC BY-NC-SA 4.0 (from PICO-8 BBS / FCDB metadata)
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=49234
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/49234.p8.png
-**Local source trail**: `projects/picovibe/carts/pico8pixelbomb/justoneboss-pico8gomod/justonebossmod.p8`
+**Local source trail**: justonebossmod.p8
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `49234`, tid `49234`).
 
 ## Changes for PyxelPico

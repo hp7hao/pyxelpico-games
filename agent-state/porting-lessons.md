@@ -21,7 +21,7 @@ Template:
 - Result: partial
 - What translated cleanly: The central arena premise maps cleanly to a host-tested grid core: step movement, magic tile collection, hazard damage, boss health, phase advancement, score, and win/loss states.
 - What needed shims/manual rewrite: The full original PICO-8 entity/promise animation system, phase scripts, persistence, hard mode, sprite sheet, and soundtrack are not line-translated yet; the first PyxelPico pass uses a simplified phase-pattern generator around the same boss-loop shape.
-- Asset/audio notes: Used a local source trail from `projects/picovibe/carts/pico8pixelbomb/justoneboss-pico8gomod/justonebossmod.p8`; added an original PyxelPico cover and simple in-code SFX rather than extracted sprite/audio data.
+- Asset/audio notes: Used a local source trail from justonebossmod.p8; added an original PyxelPico cover and simple in-code SFX rather than extracted sprite/audio data.
 - Verification: `python3 -m unittest tests.test_justoneboss_core`; `python3 -m py_compile scripts/pico8_top100_status.py scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py games/justoneboss/justoneboss_core.py games/justoneboss/justoneboss.py`; `make cart-game GAME=justoneboss PYTHON=python3`.
 - Reusable helper opportunities: Keep future top-100 action ports split into a pure gameplay core plus a Pyxel shell so movement/collision/progression rules are testable without launching Pyxel.
 - Backlog changes: Added top-100 Just One Boss entry as partial with FCDB/BBS/license/source confirmation and current fidelity gaps.

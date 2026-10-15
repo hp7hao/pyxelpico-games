@@ -6,7 +6,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=40099
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/hi/highstakes-2.p8.png
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `83548`, tid `40099`).
 
 ## Changes for PyxelPico

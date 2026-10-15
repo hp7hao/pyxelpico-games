@@ -1,6 +1,6 @@
 # PICO-8 to PyxelPico Porting Workflow
 
-This workflow is for honest 128x128 PICO-8 Lua/cart ports into `projects/pyxelpico-games` as Pyxel/PyxelPico Python games.
+This workflow is for honest 128x128 PICO-8 Lua/cart ports into this repository as Pyxel/PyxelPico Python games.
 
 It is intentionally conservative: preserve gameplay/assets when allowed, document attribution, and reject unclear rights chains.
 
@@ -24,19 +24,19 @@ Out of scope by default:
 
 Read these before porting:
 
-- `projects/pyxelpico-games/AGENTS.md`
-- `projects/pyxelpico-games/games.toml`
-- `projects/pyxelpico/docs/specs/game_migration_guide_spec.md`
-- `projects/pyxelpico/docs/specs/game_manifest_spec.md`
-- `projects/pyxelpico/docs/specs/pyxel_game_execution_spec.md`
-- `projects/pyxelpico/docs/specs/pico8_sound_engine_spec.md`
-- `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+- `AGENTS.md`
+- `games.toml`
+- the PyxelPico migration guide
+- the PyxelPico game manifest contract
+- the PyxelPico execution contract
+- the PyxelPico sound contract
+- FCDB PICO-8 bbs metadata
 
 Useful local tools/libraries:
 
-- `projects/picovibe/deps/picotool/` for inspecting/listing PICO-8 cart code and data.
-- `projects/pyxelpico/pyxelpico/pico8_audio/` for PICO-8 SFX/music parsing references.
-- `projects/pyxelpico/crates/pyxel-core/src/pico8_audio.rs` for Rust/p8mod-backed audio behavior.
+- picotool for inspecting/listing PICO-8 cart code and data.
+- the PyxelPico audio parser for PICO-8 SFX/music parsing references.
+- pico8_audio.rs for Rust/p8mod-backed audio behavior.
 
 ## Candidate Gate
 
@@ -77,7 +77,7 @@ Initial local-FCDB shortlist, easy to hard:
 
 ### 1. Preflight
 
-1. Find candidate in `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`.
+1. Find candidate in FCDB PICO-8 bbs metadata.
 2. Confirm license/source URL/cart URL.
 3. Download or locate the cart only if permitted by the workflow.
 4. Use `picotool` or equivalent extraction to list Lua and inspect cart sections.
@@ -109,7 +109,7 @@ Create:
 - `games/<game-id>/cover.png`
 - asset files only if needed and license-compatible.
 
-Follow `projects/pyxelpico-games/AGENTS.md`:
+Follow `AGENTS.md`:
 
 - one game per directory,
 - main script name matches game id,
@@ -164,7 +164,7 @@ Metadata should include:
 
 ### 7. Verify
 
-From `projects/pyxelpico-games` run at least:
+From this repository run at least:
 
 ```bash
 python3 -m py_compile scripts/build_native.py scripts/build_web.py scripts/build_cart_zips.py lib/input_helper.py
@@ -194,7 +194,7 @@ Use one focused porter before splitting into a team. The agent should:
 1. perform candidate/license audit,
 2. run API and asset/audio scan,
 3. write a port plan,
-4. implement one game in `projects/pyxelpico-games/games/<id>/`,
+4. implement one game in `games/<id>/`,
 5. update metadata/attribution,
 6. run packaging verification,
 7. report remaining fidelity gaps.

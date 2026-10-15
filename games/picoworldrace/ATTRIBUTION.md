@@ -6,7 +6,7 @@
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/pp/ppwr-5.p8.png
 **Upstream source trail**: https://github.com/PAK9/PicoWorldRace
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `106518`, tid `46495`).
 
 ## Changes for PyxelPico

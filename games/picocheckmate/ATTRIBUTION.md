@@ -6,7 +6,7 @@
 **Itch page**: https://krystman.itch.io/pico-checkmate
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/5/54038.p8.png
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `52226`, tid `31213`; live cart id `54038` from the BBS thread).
 
 ## Changes for PyxelPico

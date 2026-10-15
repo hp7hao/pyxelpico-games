@@ -6,7 +6,7 @@
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/in/intoruins-7.p8.png
 **Upstream source trail**: https://github.com/Woflox/intoruins
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `119614`, tid `49928`).
 
 ## Changes for PyxelPico

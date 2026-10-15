@@ -6,7 +6,7 @@
 **Source (BBS thread)**: https://www.lexaloffle.com/bbs/?tid=45334
 **Original cart**: https://www.lexaloffle.com/bbs/cposts/bi/birdswithguns-5.p8.png
 
-PICO-8 metadata source: `projects/fcdb/platforms/pico8/metadata/sources/bbs.json`
+PICO-8 metadata source: FCDB PICO-8 bbs metadata
 (id/pid `100000`, tid `45334`).
 
 ## Changes for PyxelPico

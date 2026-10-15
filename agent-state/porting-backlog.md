@@ -19,7 +19,7 @@ Policy:
 - License: CC BY-NC-SA 4.0 in local FCDB metadata
 - BBS: https://www.lexaloffle.com/bbs/?tid=49234
 - Cart: https://www.lexaloffle.com/bbs/cposts/49234.p8.png
-- Local source trail: `projects/picovibe/carts/pico8pixelbomb/justoneboss-pico8gomod/justonebossmod.p8`
+- Local source trail: justonebossmod.p8
 - Why: first eligible strict FCDB BBS top-100 candidate; local source/mod trail reduces extraction risk.
 - Risks: full original has many boss phases, scripted animation/entity behaviors, sprite/audio polish, persistence, and hard mode; first port targets the core arena-boss loop rather than complete line-by-line parity.
 - 2026-06-17 progress note: Added first playable PyxelPico adaptation (`games/justoneboss/justoneboss.py`) with host-tested core movement/collision/phase rules (`justoneboss_core.py`), cover, attribution, manifest, and credits; `python3 -m unittest tests.test_justoneboss_core`, `python3 -m py_compile ...`, and `make cart-game GAME=justoneboss PYTHON=python3` passed.
@@ -706,5 +706,5 @@ Policy:
 - License: CC BY-NC-SA 4.0 metadata, but derivative-IP risk
 - BBS: https://www.lexaloffle.com/bbs/?tid=142915
 - Cart: https://www.lexaloffle.com/bbs/cposts/150629.p8.png
-- Local cart: `projects/pyxelpico/carts/picovalley-2.p8.png`
+- Local cart: picovalley-2.p8.png
 - Why deferred: large Stardew-style demake; poor baseline for clean preservation workflow.
